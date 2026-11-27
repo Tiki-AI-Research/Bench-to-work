@@ -1,0 +1,64 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 1943 >>
+stream
+BT /F3 10.5 Tf 60.00 718.35 Td (Email Ч printed from Outlook) Tj ET
+BT /F1 10 Tf 60.00 699.35 Td (From: Marcus Lee <marcus.lee@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 685.35 Td (To: Dana Whitfield <dana.whitfield@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 671.35 Td (Cc: Jordan Ellis <jordan.ellis@arcadialedger.com>; Priya Nair <priya.nair@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 657.35 Td (Date: Thu, Nov 19, 2026 6:22 PM ET) Tj ET
+BT /F1 10 Tf 60.00 643.35 Td (Subject: RE: Approval request Ч Harbor Point Oct 2026 SLA credit \(HP-4452\)) Tj ET
+BT /F1 10.5 Tf 60.00 628.70 Td () Tj ET
+BT /F1 10.5 Tf 60.00 613.05 Td (Dana Ч sorry for the slow turn; I was out last week. Jordan, copying you since you've picked up Harbor) Tj ET
+BT /F1 10.5 Tf 60.00 599.40 Td (Point.) Tj ET
+BT /F1 10.5 Tf 60.00 579.75 Td (I've looked at the workbook. I'm OK approving the October credit at the 10% tier \($4,800\) provided SRE) Tj ET
+BT /F1 10.5 Tf 60.00 566.10 Td (confirms that none of the Oct 15 outage minutes fall inside a scheduled maintenance window Ч I see) Tj ET
+BT /F1 10.5 Tf 60.00 552.45 Td (CHG-24117 on the change calendar for that night. Priya, can you check and reply on this thread?) Tj ET
+BT /F1 10.5 Tf 60.00 532.80 Td (If any of those minutes are inside the window, rerun the numbers and route it to whoever the SOP says) Tj ET
+BT /F1 10.5 Tf 60.00 519.15 Td (based on the new amount. Either way, nothing final goes to Harbor Point until SRE has confirmed.) Tj ET
+BT /F1 10.5 Tf 60.00 499.50 Td (Marcus) Tj ET
+BT /F3 10.5 Tf 60.00 479.85 Td (On Thu, Nov 12, 2026 at 11:03 AM Dana Whitfield wrote:) Tj ET
+BT /F1 10 Tf 78.00 463.85 Td (> Marcus Ч requesting approval for Harbor Point's October SLA credit: 236 min Downtime \(HP-4410,) Tj ET
+BT /F1 10 Tf 78.00 450.85 Td (HP-4431\),) Tj ET
+BT /F1 10 Tf 78.00 435.85 Td (> 10% tier, $4,800.00. Workbook attached. Thanks! Ч Dana) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 1 of 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Title (2026-11-19 Marcus Lee RE Approval Request) /Producer (Arcadia Ledger document export) >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000320 00000 n 
+0000000425 00000 n 
+0000002420 00000 n 
+0000002566 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
+startxref
+2681
+%%EOF

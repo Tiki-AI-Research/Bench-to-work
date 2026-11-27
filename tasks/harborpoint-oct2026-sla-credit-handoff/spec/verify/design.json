@@ -1,0 +1,108 @@
+{
+  "scoring": {
+    "rule": "core_minor",
+    "minor_weight": 0.2
+  },
+  "stages": [
+    {
+      "id": "s1_inherited_claim",
+      "scored": true,
+      "summary": "Correct the inherited 30-day (43,200 min) SLA denominator error to October's 31-day (44,640 min) contractual basis via live formulas while respecting sent-mail history boundaries",
+      "items": [
+        {
+          "id": "s1_workbook_basis_corrected",
+          "role": "core"
+        },
+        {
+          "id": "s1_sent_history_recognized",
+          "role": "core"
+        },
+        {
+          "id": "s1_ledger_approval_status",
+          "role": "minor"
+        },
+        {
+          "id": "s1_customer_reply_draft",
+          "role": "minor"
+        },
+        {
+          "id": "s1_marcus_note",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s2_sre_overlap",
+      "scored": true,
+      "summary": "Model the 60-minute SRE maintenance overlap exclusion scenario (99.61% / 5% / $2,400) and route approval per SOP without prematurely promising a credit figure to the customer",
+      "items": [
+        {
+          "id": "s2_workbook_exclusion_scenario",
+          "role": "core"
+        },
+        {
+          "id": "s2_approval_routing",
+          "role": "core"
+        },
+        {
+          "id": "s2_greg_position",
+          "role": "minor"
+        },
+        {
+          "id": "s2_ledger_sync",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s3_customer_dispute",
+      "scored": true,
+      "summary": "Maintain side-by-side contractual calculations ($4,800 vs $2,400) upon customer notice dispute, escalate for legal/executive sign-off, and hold outbound commitments under pressure",
+      "items": [
+        {
+          "id": "s3_workbook_both_calcs",
+          "role": "core"
+        },
+        {
+          "id": "s3_dispute_routing",
+          "role": "core"
+        },
+        {
+          "id": "s3_customer_reply_today",
+          "role": "core"
+        },
+        {
+          "id": "s3_sent_history_preserved",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s4_decision_closeout",
+      "scored": true,
+      "summary": "Finalize the approved $4,800 (99.47% / 10%) primary SLA formula chain across Uptime_Calc, issue the Billing CMR and final customer notice, and close out case records",
+      "items": [
+        {
+          "id": "s4_workbook_final_result",
+          "role": "core"
+        },
+        {
+          "id": "s4_cmr_draft",
+          "role": "core"
+        },
+        {
+          "id": "s4_customer_final_note",
+          "role": "core"
+        },
+        {
+          "id": "s4_records_closeout",
+          "role": "minor"
+        },
+        {
+          "id": "s4_sent_history_recorded",
+          "role": "minor"
+        }
+      ]
+    }
+  ]
+}

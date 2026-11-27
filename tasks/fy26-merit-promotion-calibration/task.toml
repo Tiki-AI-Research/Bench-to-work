@@ -1,0 +1,25 @@
+schema_version = "1.4"
+
+[task]
+name = "bench-to-work/fy26-merit-promotion-calibration"
+description = "FY26 merit and promotion calibration: finish the workbook, absorb an HR Ops batch, executive approvals and a pre-lock update, then apply the CFO's Product decision and reissue the package"
+
+[metadata]
+format = "bench-to-work"
+task_spec = "spec/task.json"
+stages = 5
+verifier_checks = 17
+criteria = 14
+
+[agent]
+timeout_sec = 21600
+
+[verifier]
+timeout_sec = 120
+
+[environment]
+build_timeout_sec = 1800
+cpus = 2
+memory_mb = 4096
+workdir = "/workspace"
+network_mode = "public"

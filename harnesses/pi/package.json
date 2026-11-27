@@ -1,0 +1,16 @@
+{
+  "name": "bench-to-work-pi-roles",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "test": "node --test *.test.mjs"
+  },
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "0.87.1",
+    "typebox": "1.3.27",
+    "undici": "8.10.2"
+  }
+}

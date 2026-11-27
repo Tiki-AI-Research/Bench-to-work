@@ -1,0 +1,25 @@
+schema_version = "1.4"
+
+[task]
+name = "bench-to-work/harborpoint-oct2026-sla-credit-handoff"
+description = "Harbor Point Logistics: October 2026 SLA credit claim, from inherited case file to approved credit"
+
+[metadata]
+format = "bench-to-work"
+task_spec = "spec/task.json"
+stages = 4
+verifier_checks = 4
+criteria = 14
+
+[agent]
+timeout_sec = 21600
+
+[verifier]
+timeout_sec = 120
+
+[environment]
+build_timeout_sec = 1800
+cpus = 2
+memory_mb = 4096
+workdir = "/workspace"
+network_mode = "public"

@@ -1,0 +1,167 @@
+{
+  "scoring": {
+    "rule": "core_minor",
+    "minor_weight": 0.2
+  },
+  "stages": [
+    {
+      "id": "s1_complete_baseline",
+      "scored": true,
+      "summary": "Formula-driven Band Max split, pool reconciliation, and below-minimum exception flagging without unauthorized edits",
+      "items": [
+        {
+          "id": "s1_chk_draft_hold",
+          "role": "minor"
+        },
+        {
+          "id": "s1_chk_band_max_split",
+          "role": "core"
+        },
+        {
+          "id": "s1_chk_pools",
+          "role": "core"
+        },
+        {
+          "id": "s1_chk_formula_driven",
+          "role": "core"
+        },
+        {
+          "id": "s1_chk_data_exceptions",
+          "role": "core"
+        },
+        {
+          "id": "s1_chk_summary_tie",
+          "role": "minor"
+        },
+        {
+          "id": "s1_chk_change_log",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s2_hr_ops_batch",
+      "scored": true,
+      "summary": "Selective FY26 pre-lock HR Ops batch propagation vs FY27 deferral via live formulas",
+      "items": [
+        {
+          "id": "s2_chk_draft_hold",
+          "role": "minor"
+        },
+        {
+          "id": "s2_chk_batch_applied",
+          "role": "core"
+        },
+        {
+          "id": "s2_chk_pools_after_batch",
+          "role": "core"
+        },
+        {
+          "id": "s2_chk_live_formulas",
+          "role": "core"
+        },
+        {
+          "id": "s2_chk_summary_revised",
+          "role": "minor"
+        },
+        {
+          "id": "s2_chk_change_log",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s3_approvals",
+      "scored": true,
+      "summary": "Conditional executive approval reconciliation across department ceiling, company total condition, and VP lump-sum threshold",
+      "items": [
+        {
+          "id": "s3_chk_draft_hold",
+          "role": "minor"
+        },
+        {
+          "id": "s3_chk_approval_coverage",
+          "role": "core"
+        },
+        {
+          "id": "s3_chk_status_recorded",
+          "role": "core"
+        }
+      ]
+    },
+    {
+      "id": "s4_final_package",
+      "scored": true,
+      "summary": "Pre-lock rating update, final issuance stripping DRAFT, and dual CFO gap identification",
+      "items": [
+        {
+          "id": "s4_chk_final_issue",
+          "role": "minor"
+        },
+        {
+          "id": "s4_chk_prelock_applied",
+          "role": "core"
+        },
+        {
+          "id": "s4_chk_live_formulas",
+          "role": "core"
+        },
+        {
+          "id": "s4_chk_gap_report",
+          "role": "core"
+        },
+        {
+          "id": "s4_chk_basis_note",
+          "role": "minor"
+        },
+        {
+          "id": "s4_chk_summary_final",
+          "role": "minor"
+        }
+      ]
+    },
+    {
+      "id": "s5_cfo_product_decision",
+      "scored": true,
+      "summary": "Uniform proportional Product merit scaling interacting with Band Max cap while preserving promotions and non-Product pools",
+      "items": [
+        {
+          "id": "s5_chk_reissue",
+          "role": "minor"
+        },
+        {
+          "id": "s5_chk_product_target",
+          "role": "core"
+        },
+        {
+          "id": "s5_chk_bandmax_interaction",
+          "role": "core"
+        },
+        {
+          "id": "s5_chk_live_formulas",
+          "role": "core"
+        },
+        {
+          "id": "s5_chk_unchanged",
+          "role": "core"
+        },
+        {
+          "id": "s5_chk_exception_documented",
+          "role": "core"
+        },
+        {
+          "id": "s5_chk_status_report",
+          "role": "minor"
+        },
+        {
+          "id": "s5_chk_change_log",
+          "role": "minor"
+        },
+        {
+          "id": "s5_chk_summary_synced",
+          "role": "minor"
+        }
+      ]
+    }
+  ]
+}

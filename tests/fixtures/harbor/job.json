@@ -1,0 +1,18 @@
+{
+  "jobs_dir": "runs/harbor",
+  "n_concurrent_trials": 1,
+  "tasks": [{"path": "tests/fixtures/harbor/excel"}],
+  "agents": [{
+    "import_path": "multi_round_harbor.agent:MainAgent",
+    "kwargs": {
+      "project": ".",
+      "task_path": "tests/fixtures/excel_revision/task.json",
+      "config_path": "tests/fixtures/harbor/agent-config.json"
+    }
+  }],
+  "environment": {"type": "docker", "delete": true},
+  "verifier": {
+    "import_path": "multi_round_harbor.verifier:ReportVerifier",
+    "kwargs": {"reward_function": "multi_round_harbor.verifier:final_check_fraction"}
+  }
+}

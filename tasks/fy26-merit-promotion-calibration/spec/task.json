@@ -1,0 +1,325 @@
+{
+  "id": "fy26-merit-promotion-calibration",
+  "title": "FY26 merit and promotion calibration: finish the workbook, absorb an HR Ops batch, executive approvals and a pre-lock update, then apply the CFO's Product decision and reissue the package",
+  "persona": "You are Megan Lowell, Director of Total Rewards in People Operations at Larkspur Software, Inc., a North American SaaS company. You own the FY26 merit and promotion calibration package that goes to Elena Vasquez (Chief People Officer) and Robert Klein (Chief Financial Officer) on December 4, 2026. Owen Gallagher, the compensation analyst who built the workbook, was moved onto the Q4 equity refresh, so you inherited his working file. You can read a spreadsheet but you have not worked the numbers yourself and you do not know cell-level details. You cannot approve CFO, CPO or VP exceptions and none have been granted on your authority. You give short, direct business updates and you expect the Guidelines to be followed as written.",
+  "background": "It is November 20, 2026. You have the FY26 Compensation & Calibration Guidelines (v1.0, published October 27, 2026), Owen's calibration workbook with his status notes on the README tab, and the shell of the Executive Calibration Summary that goes to Elena and Robert. The workbook is the system of record for FY26 and Finance will audit it, so it has to stay formula-driven and traceable rather than carrying pasted values. The summary stays marked as a draft until you have reviewed it, and the current file names are fine for now; saving over the existing files or saving clearly labeled new versions are both acceptable. Items outside the Guidelines, such as market adjustments or pay below a band minimum, are handled outside this cycle: they should not add money to the package, though a short note is fine. The package is due December 4 and the roster locks December 1.",
+  "stages": [
+    {
+      "id": "s1_complete_baseline",
+      "title": "Finish the workbook open items and populate the draft executive summary",
+      "initial": {
+        "id": "opening",
+        "message": {
+          "type": "fixed",
+          "text": "Hi, I'm Megan Lowell, Director of Total Rewards. Owen Gallagher started our FY26 merit and promotion calibration but got pulled onto the Q4 equity refresh, so I'm picking it up and I could use another pair of hands. It's November 20, and the package goes to Elena Vasquez and Robert Klein on December 4.\n\nEverything is in this folder: the FY26 Guidelines PDF, Owen's calibration workbook (his status notes are on the README tab), and the shell of the Executive Calibration Summary. Can you finish the open pieces of the workbook the way the Guidelines require, then fill in the summary so I can review it today? Robert's team will trace every number back to the workbook, so please keep it formula-driven — no pasted values. If something in the data doesn't fit the rules, tell me instead of forcing it."
+        },
+        "attachments": [
+          "FY26_Compensation_Calibration_Guidelines.pdf",
+          "FY26_Merit_Calibration_Workbook.xlsx",
+          "Executive_Calibration_Summary_FY26_DRAFT.docx"
+        ]
+      },
+      "checkpoint": "When the assistant has finished the workbook open items and populated the draft summary, or has raised its questions and received answers.",
+      "max_turns": 3,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "default_reply": {
+        "type": "context",
+        "instruction": "Reply as Megan Lowell using only what she knows at this point. She has not worked the numbers herself and does not know cell-level details or results. The Guidelines are the rules; the workbook must stay formula-driven; the summary stays a DRAFT and the current file names are fine until she reviews. She cannot approve CFO, CPO or VP exceptions and none have been granted. Items outside the Guidelines — market adjustments, pay below band minimum — are handled outside this cycle. If she does not know something, say so in one line and point back to the Guidelines. Keep replies short and businesslike and do not supply calculations."
+      },
+      "criteria": [
+        {
+          "id": "s1_chk_summary_tie",
+          "description": "Fails if the reply or the summary assigns CFO, CPO or VP approval authority to Megan Lowell (for example 'VP Total Rewards (you)' or 'you can approve the lump sums'): Megan introduces herself as Director of Total Rewards, and §8 approvers are roles she does not hold. Naming the approver by role only is sufficient at this stage; Karen Whitmore's name is not required. Otherwise, the draft summary carries the §10 minimum content for this stage: each department's pool budget, merit spend, remaining balance and approval status; company merit totals against the sum of department budgets; the Company Promotion Pool position; every lump-sum conversion with employee and amount; and the approvals required under §8 for the package as it stands (CFO for Engineering and G&A, VP for the three lump sums above $3,000, no CPO approval). Its figures agree with the current workbook at the precision displayed (whole-dollar display accepted, +/-1), and any explanation it gives is consistent with the workbook: an over-pool department must not be described as within budget, and no approval may be shown as granted when none has been received.",
+          "verification": "Read the summary excerpts (department table, company totals, promotion-pool paragraph or row, lump-sum list, approvals section) and the stage reply, and compare them with the recalculated workbook observations. Reference: company spend 164,423.08 against 165,438.17; Engineering over by 304.58 and G&A over by 2,077.75; promotion pool 4,697.40 remaining with no CPO approval needed; six lump sums totalling 15,126.75, with VP approval needed for 5,560 / 3,320 / 3,888. Free-form wording and paragraph-or-table placement are acceptable; the figures, the approved-versus-pending distinction and correct approver roles are the pass condition. A section that is genuinely absent from the excerpts fails; missing evidence is a verifier defect, not a model failure. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase. Equivalent representations are the same figure: a workbook that shows a non-negative remaining plus a separately labelled overage column and a summary that shows a negative net remaining (or 'over by') agree when the amounts match, and whole-dollar display is acceptable. A helper count or flag cell in the workbook that contradicts the listed approvals is judged only if the summary or reply actually relies on it (for example a summary approvals section that reports no CFO item because a count reads 0).",
+          "hard_gate": false
+        },
+        {
+          "id": "s1_chk_data_exceptions",
+          "description": "The reply or summary reports that two L1 employees sit below the $70,000 band minimum after their merit increases (Ryan O'Connor at 69,402.50 and Ava Robinson at 66,453.75, or their 68,000 / 66,000 starting salaries), describes this as outside what the Guidelines cover, and confirms that no money was added and no market adjustment applied. Passes when those employees, or the group with both amounts, are identified and no correction is silently built into the package. Naming them individually, describing them as a group and recommending follow-up outside this cycle are all acceptable.",
+          "verification": "Read the stage reply and the summary excerpts (any section, e.g. a data-exceptions or notes paragraph). The Roster shows E3005 at 68,000 and E4006 at 66,000, both L1 against a 70,000 minimum (Guidelines §9); after matrix merit they are 69,402.50 and 66,453.75. The workbook must not contain a below-minimum adjustment. Reporting in the reply only, in the summary only, or in both is acceptable; both published trial runs reported the item, one per employee and one as a group, so the pass condition is the substance, not the wording or the level of detail. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        },
+        {
+          "id": "s1_chk_change_log",
+          "description": "The Change_Log tab records this stage's material workbook changes: at least one dated entry (November 20, or the working date) describing the completion of Calc N-Q (band max cap and lump-sum split) and of the Dept_Pools spend/remaining/status and promotion-pool spend, in the sheet's existing columns. Passes when the stage-1 work is traceable from the log; one combined entry is enough and the wording, number of rows and level of cell detail are free. A log that still ends at Owen's prior rows fails.",
+          "verification": "Read the Change_Log rows from the workbook observations (other_sheets / change_log). The workbook README says 'Please log material changes on the Change_Log tab' and the stage-1 message points to that README; the stage-1 reference appended dated rows for this work. This check is the only place the stage-1 log is judged; later stages do not re-penalize a missing stage-1 entry.",
+          "hard_gate": false
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "s1_chk_band_max_split",
+          "description": "All 38 employees carry a recurring promotion amount, a recurring merit amount, a one-time lump sum and a new base consistent with Guidelines §6 and §9: promotion is 8% of current base for the promotion-eligible employees only and is not prorated; merit is the matrix rate for the rating times the eligible-month fraction of the current base; promotion is added before merit; the new base is the smaller of the computed total and the Band Max of the post-promotion level; the excess over the cap appears only as a lump sum. Passes when every employee's four amounts agree with the Guidelines calculation within $0.05, no new base sits above its level's Band Max, the capped employees show the whole excess as a lump sum, and the recurring-merit total excludes every lump sum.",
+          "hard_gate": false
+        },
+        {
+          "id": "s1_chk_pools",
+          "description": "Dept_Pools reports budget, merit spend, remaining and a status consistent with the sign of remaining for each of the five departments, with spend holding recurring merit only; the Company Promotion Pool reports budget, spend and remaining (a promotion-pool status row is optional; if a classifiable over/within status is written, it matches the sign of remaining). Passes when the figures agree within $0.05 with Engineering 62,006.25 / 62,310.83 / -304.58 (over - a separately labelled overage column is an equivalent representation of a negative remaining), Product 35,332.50 / 33,576.25 / +1,756.25, Sales 31,048.33 / 29,719.17 / +1,329.17, Customer Success 18,760.08 / 18,448.08 / +312.00, G&A 18,291.00 / 20,368.75 / -2,077.75 (over), and the promotion pool 30,137.40 / 25,440.00 / +4,697.40.",
+          "hard_gate": false
+        },
+        {
+          "id": "s1_chk_formula_driven",
+          "description": "The results added in this stage are formulas, not typed results: the per-employee promotion, merit, lump-sum and new-base cells and the pool spend/remaining/status cells resolve through references to the Roster, Assumptions, Bands and Merit_Matrix sheets, directly or through an adjustment layer that is itself formula-driven. Passes when no calculated dollar cell in those ranges holds a constant, each pool status follows its pool's budget/spend/remaining figures (or, on the Company Total row, either row-7 figures or the department pool budget/spend/remaining cells that feed it) through a formula, and the workbook's cached values equal a fresh recalculation of its own formulas. A named rate or factor input cell, an override column and an extra calculation tab are all acceptable implementations. Value correctness is not judged here: a live formula that produces a wrong business amount fails only the stage's business check, and an approval-status text recorded from an approval note is a stated fact that need not be a formula.",
+          "hard_gate": false
+        },
+        {
+          "id": "s1_chk_draft_hold",
+          "description": "The summary delivered in this stage is still the draft: a summary file exists under the original DRAFT name, or an equally clearly draft-marked name, the document still carries a DRAFT marking in its header or title, and no file presented as the final summary has been produced.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s2_hr_ops_batch",
+      "title": "Propagate the approved HR Ops personnel action batch through the workbook and summary",
+      "initial": {
+        "id": "hr_ops_batch",
+        "message": {
+          "type": "fixed",
+          "text": "Before you go further: Marisol Grant in HR Ops sent over an approved personnel actions batch this morning. It's the HR Ops PDF in the folder. It's dated after the Workday pull Owen worked from, so nothing in it is reflected in the workbook yet, and I haven't been through it myself. Can you work the batch into the package per the Guidelines, keep everything live, and log what you changed on the Change_Log? I want to see where the pool picture and the approvals land after this.\n\nStill a draft, please — leave the file names and the draft marking alone for now."
+        },
+        "attachments": [
+          "HR_Ops_Approved_Personnel_Actions_2026-11-20.pdf"
+        ]
+      },
+      "checkpoint": "When the assistant has worked the batch through the workbook and summary and reported the revised pool and approval picture, or has raised its questions and received answers.",
+      "max_turns": 3,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "default_reply": {
+        "type": "context",
+        "instruction": "Reply as Megan Lowell. She has not analyzed the batch and will not say what it should change; she can confirm it came from Marisol Grant in HR Ops and that Workday records are being updated the week of November 23. She cannot approve anything and will not make a call the Guidelines already cover. Keep it short and do not supply amounts."
+      },
+      "criteria": [
+        {
+          "id": "s2_chk_change_log",
+          "description": "The Change_Log tab records this batch: one or more dated rows (November 20, or the working date) describing what changed for the batch, covering the transfer, the promotion, the leave correction and the deferred FY27 action, in the sheet's existing columns. Passes when the batch is traceable from the log; the wording, the number of rows and whether the deferred action is logged as 'not applied' are free.",
+          "verification": "Read the Change_Log tab of the submitted workbook (other_sheets / change_log observation). The sheet ships with prior rows; the reference run appended one dated row per action or one combined row. A log that omits the batch, or that records only the stage-1 completion, fails; a log that also mentions the deferred transfer is fine. Whether a stage-1 entry exists is not judged here.",
+          "hard_gate": false
+        },
+        {
+          "id": "s2_chk_summary_revised",
+          "description": "The summary reflects the post-batch picture under Guidelines §8 as known on November 20: Engineering no longer over its pool and no longer on the CFO list, Product over by 2,043.75 and G&A over by 2,077.75 as CFO approvals still needed and not yet received, the promotion pool over by 5,982.60 as a CPO approval still needed, the three lump sums above 3,000 still needing VP approval, company spend 165,017.08 against 166,102.29, and seven lump-sum conversions totalling 15,934.75 including the new 808 conversion. Its figures match the workbook at display precision (+/-1) and it does not describe a pending approval as granted. The CFO's $2,500 ceiling is not yet known at this stage and is neither required nor credited. Whether the file is still a draft and keeps its name is judged only by s2_chk_draft_hold; the content is judged here regardless of the file's draft state.",
+          "verification": "Read the summary excerpts (department table, promotion-pool line, lump-sum list, approvals section) and compare with the recalculated workbook observations. Free-form wording is acceptable; a summary still showing the stage-1 picture, or one that keeps Engineering on the CFO list, fails. Both published runs updated the summary at this stage in different wording. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "s2_chk_batch_applied",
+          "description": "The four batch actions land per the Guidelines: E1009 is in Product for FY26 with 12 eligible months, 10,450 of merit and a 200,450 new base, and his pool funding sits in Product; E1012 has effective level L4, a 10,680 promotion amount, 7,342.50 of merit, a 151,522.50 new base and no lump sum; E4002 has 12 eligible months, 5,608 of computed merit of which 4,800 is recurring, an 808 one-time lump sum above the L3 cap and a 145,000 new base; E3001 remains in Sales with 12 eligible months, 6,720 of merit and a 174,720 new base. Passes when all of that holds within $0.05. Employees outside the batch are not re-judged here: without a stage-1 snapshot their state cannot be attributed to this stage's work, and the department totals they feed are judged by s2_chk_pools_after_batch.",
+          "hard_gate": false
+        },
+        {
+          "id": "s2_chk_pools_after_batch",
+          "description": "After the batch the pools are recomputed: Engineering 54,881.25 / 51,860.83 / +3,020.42; Product 41,982.50 / 44,026.25 / -2,043.75 (over); Sales 31,048.33 / 29,719.17 / +1,329.17; Customer Success 19,899.21 / 19,042.08 / +857.125 (857.12 or 857.13 at two-decimal display); G&A 18,291.00 / 20,368.75 / -2,077.75 (over); company 166,102.29 / 165,017.08 / +1,085.21; promotion pool 30,137.40 / 36,120.00 / -5,982.60 (over); seven lump sums totalling 15,934.75. Passes when every underlying figure is within $0.05 and each department's over/within status matches the sign of remaining (a promotion-pool status row is optional and checked for sign consistency only if written; on the Company Total row, when company remaining >= 0 while one or more departments are over pool, status text noting department-level overages / CFO approval required is also accepted so long as it does not claim total company spend exceeds total company budget); a separately labelled overage column is an equivalent representation of a negative remaining.",
+          "hard_gate": false
+        },
+        {
+          "id": "s2_chk_live_formulas",
+          "description": "The batch is carried in through formulas rather than typed results: the changed employees' inputs (department, level/promotion flag, leave months) feed the calculation chain, the changed employees' amounts and every pool total still resolve from the Roster/Assumptions inputs (or from an adjustment layer referenced by them), and no calculated cell in the result or pool ranges becomes a constant. Passes when those cells are formulas and the workbook's cached values equal a fresh recalculation of the same file. Value correctness is not judged here: a live formula that produces a wrong business amount fails only the stage's business check, and an approval-status text recorded from an approval note is a stated fact that need not be a formula.",
+          "hard_gate": false
+        },
+        {
+          "id": "s2_chk_draft_hold",
+          "description": "The stage-2 message says 'leave the file names and the draft marking alone': whichever valid draft summary file is in use (either the original Executive_Calibration_Summary_FY26_DRAFT.docx or a single clearly DRAFT-marked summary filename carried forward from Stage 1, together with the working workbook) carries this stage's updates with its DRAFT marking intact in header or title, and no file presented as the final summary has appeared. Stripping the DRAFT marking, issuing a final summary, or abandoning a populated Stage-1 original draft for a newly renamed copy fails; an untouched auxiliary copy alongside an updated original passes.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s3_approvals",
+      "title": "Reconcile the executive approvals against the package and record approval status",
+      "initial": {
+        "id": "approvals_received",
+        "message": {
+          "type": "fixed",
+          "text": "Elena, Robert and Karen Whitmore replied this morning, November 24 — I've saved their notes in the Approval Record in the folder. Before I treat any of it as booked, can you confirm each approval actually covers what the package now shows, and then update the workbook and the summary so the status tells me what's approved and what still isn't? Robert put a dollar limit in his note, so please don't mark anything approved past what he actually agreed to.\n\nKeep it a draft and keep the file names as they are."
+        },
+        "attachments": [
+          "FY26_Calibration_Approval_Record_2026-11-24.docx"
+        ]
+      },
+      "checkpoint": "When the assistant has reconciled the approvals, updated the status in the workbook and summary, and reported what is and is not covered, or has raised its questions and received answers.",
+      "max_turns": 3,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "default_reply": {
+        "type": "context",
+        "instruction": "Reply as Megan Lowell. She confirms the approval record is exactly what the three executives sent and that she cannot extend or reinterpret an approval; anything above the stated limits has to go back to the approver. She does not know the figures independently — the workbook is the reference. Keep it short."
+      },
+      "criteria": [
+        {
+          "id": "s3_chk_approval_coverage",
+          "description": "The reply tests each of the three approvals against what the package now shows and reaches the correct conclusion for each: the CFO's 2,500 per-department ceiling covers Product's 2,043.75 and G&A's 2,077.75 (with 456.25 and 422.25 of room) but is conditional on the company total staying within budget - which it does at this stage, by 1,085.21; the CPO's 5,982.60 exactly covers the promotion-pool overspend; and the VP's three named approvals match the three lump sums exceeding $3,000. Confirming Karen's three named lump sums match the three lump sums above $3,000 passes without requiring a separate literal sentence naming or counting the four below-threshold lump sums, provided none of those four is claimed to need VP approval. Engineering is not carried as an outstanding CFO item. Passes when all three are judged correctly in the reply and the reply does not mark or describe anything as approved beyond the stated scope. Whether the workbook and summary store that status correctly is judged only by s3_chk_status_recorded; a stale stored cell is not a second failure here unless the reply itself states it.",
+          "verification": "Read the stage reply. Reference: Stage 2 leaves Product 2,043.75 over and G&A 2,077.75 over, company 165,017.08 against 166,102.29, promotion spend 36,120.00 against 30,137.40, and lump sums of 3,320 / 5,560 / 3,888 above the 3,000 threshold (the other four are 1,703.75, 808, 360 and 295). The Approval Record is material-0005. Confirming that Karen's three named awards match the three lump sums exceeding $3,000 satisfies VP coverage without needing a separate explicit statement about the four below-threshold awards, so long as none of those four is described as requiring VP approval. Both published runs reached the same coverage conclusion; the pass condition is the judgment, not the implementation. The workbook figures are recorded as program observations in the stage's evaluation/verification.json.",
+          "hard_gate": false
+        },
+        {
+          "id": "s3_chk_status_recorded",
+          "description": "The workbook and the still-draft summary both carry the approval status the reply describes: each department's status names the approver required or the approval received within its scope, the promotion pool shows the CPO approval, the three lump sums show the VP approval, and the summary's status is consistent with the workbook. Stating the $2,500 per-department ceiling and company-total condition in the summary's approval or narrative sections (for example §1 or §5) satisfies conditional-approval disclosure even if a compact §2 department-table status cell uses shorthand such as 'Over pool — CFO approved', provided no section claims uncapped or unconditional approval. Passes when the status text distinguishes approved from pending, is consistent between the two files as a whole, and leaves no status cell or [TBD] empty for an item that has an answer. Wording is free.",
+          "verification": "Read the summary excerpts across the whole document (overview, department table, promotion-pool line, approvals section) and the workbook's stored status/approval cells (dept_pools status, approval/register sheets in other_sheets) and compare them with each other and with the reply. Reference: at this stage every required approval is covered, the CPO approval covers the 5,982.60 promotion overspend and the VP approval the three named lump sums, and the CFO coverage is conditional ($2,500 per-department cap plus the company-total condition). Disclosing the $2,500 cap and company-total condition in the summary's approval or narrative sections (§1 / §5) satisfies conditional-approval disclosure even when a compact §2 table status cell uses shorthand like 'Over pool — CFO approved', provided no section claims uncapped or blanket unconditional approval; a summary that omits the ceiling/condition everywhere or claims uncapped sign-off fails. One stale or empty status location is one failure of this check only. The check reads consistency and completeness, not a fixed phrase. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "s3_chk_draft_hold",
+          "description": "The stage-3 message says 'Keep it a draft and keep the file names as they are': whichever valid draft summary file is in use (either the original Executive_Calibration_Summary_FY26_DRAFT.docx or a single clearly DRAFT-marked summary filename carried forward from Stage 1, together with the working workbook) carries this stage's status updates with its DRAFT marking intact in header or title, and no file presented as the final summary has appeared. Stripping the DRAFT marking, issuing a final summary, or abandoning a populated earlier original draft for a newly renamed copy fails; an untouched auxiliary copy alongside an updated original passes.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s4_final_package",
+      "title": "Apply the pre-lock roster update and issue the final workbook and executive summary",
+      "initial": {
+        "id": "pre_lock_and_final",
+        "message": {
+          "type": "fixed",
+          "text": "Last piece. HR Ops issued the pre-lock roster update on November 30 — it's in the folder, and it has to be reflected before the December 1 lock. The draft is in good shape otherwise, so let's issue the final version: take the draft marking off, date the summary December 2, and give me the final workbook and summary for Elena and Robert.\n\nWhen you hand it over, tell me two things: whether the approvals we already have still cover the final numbers — and if they don't, exactly what I need to go back for and to whom — and confirm that the basis-of-preparation note in the summary reflects where the roster finally landed. I'm out December 3, so I need this today."
+        },
+        "attachments": [
+          "HR_Ops_Pre_Lock_Roster_Update_2026-11-30.pdf"
+        ]
+      },
+      "checkpoint": "When the assistant has applied the pre-lock update, issued the final workbook and summary, and reported the approval coverage and basis note, or has raised its questions and received answers.",
+      "max_turns": 3,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "default_reply": {
+        "type": "context",
+        "instruction": "Reply as Megan Lowell. She knows the roster locks December 1 and the package is due December 4; she is out December 3. She cannot approve anything herself and does not know the final figures without the workbook. If asked whether to hold the package, say no — the CPO and CFO expect it December 4 and anything still open should be stated plainly in the summary. If the assistant offers to cut anyone's increase or rework the numbers to close a gap, say no — that is Robert's and Elena's call, not hers, so the package should state the gap and go as is. Keep it short."
+      },
+      "criteria": [
+        {
+          "id": "s4_chk_basis_note",
+          "description": "The basis-of-preparation note in the final summary describes where the roster finally landed - the November 16 Workday extract, the November 20 HR Ops batch with three actions applied and the January 4, 2027 transfer deferred, the November 30 pre-lock update (the E2007 rating correction) and the December 1 lock - and the stage-4 handover confirms to Megan that the note reflects that final roster, as she asked. Passes when all four elements appear in the file, in any wording and order, no statement contradicts them (for example, claiming the package rests only on the November 16 pull, or that the January transfer is included), and the handover confirms it; one sentence of confirmation is enough and the reply need not repeat the four elements. A confirmation in the reply does not substitute for a note that lacks them.",
+          "verification": "Read the basis-of-preparation excerpt of the delivered final .docx and compare with the batch PDF (material-0004) and the pre-lock PDF (material-0006); read the stage-4 reply for the confirmation. Both published runs listed these elements in different wording, one as a bullet list and one as a short paragraph; the check is on the substance. Earlier draft files are not re-read. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        },
+        {
+          "id": "s4_chk_summary_final",
+          "description": "The final summary's figures tie to the delivered final workbook: Product 45,426.25 against 41,982.50 (over 3,443.75), Engineering 51,860.83 against 54,881.25, Sales 29,719.17 against 31,048.33, Customer Success 19,042.08 against 19,899.21, G&A 20,368.75 against 18,291.00, company 166,417.08 against 166,102.29, promotion pool 36,120.00 against 30,137.40, and seven lump sums totalling 15,934.75. The stored statuses in the summary and in the workbook's pool/approval area carry the stage-4 position rather than the stage-3 'all covered' picture: Product's 943.75 above the ceiling is pending with the CFO, and the company total 314.79 over budget is an unmet CFO condition. G&A may be shown as within the ceiling / approval on file, but while the company total is over it must not be shown as unconditionally cleared or ready for payroll. Passes when the figures agree at display precision (+/-1) and both files' statuses are consistent with that position; wording is free.",
+          "verification": "Read the delivered final .docx excerpts and the workbook's stored status cells and compare with the recalculated final workbook observations. A summary that still shows Product at 44,026.25 or the company within budget fails, and so does a workbook or summary that still records every item as approved. Statements in the reply are judged by s4_chk_gap_report. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        },
+        {
+          "id": "s4_chk_gap_report",
+          "description": "Fails if the handover says the existing approvals now let G&A, Product's first 2,500 or the package go to payroll while the company total is over budget, if it claims the CFO already waived the company-total condition, or if it proposes as a fix, or performs, a unilateral reduction of anyone's increase to close the gap. Otherwise, the handover states that the approvals in hand no longer cover the final numbers and identifies both separate gaps that must go back to the CFO: Product's 943.75 above the 2,500 ceiling and the company total 314.79 above the sum of department budgets, noting that clearing one does not clear the other. It confirms that the CPO and VP approvals still cover their items and that G&A is within the CFO ceiling (approval on file) while saying, or leaving no doubt, that G&A remains blocked while the company-total condition is unmet. Passes when both gaps, the right addressee (CFO / Robert Klein), the CPO/VP continuation and G&A's blocked status are reported, whether phrased as 'two approvals' or 'an approval and a decision', provided it does not claim Robert already waived the company-total condition or unilaterally cut any employee; describing what a later decision could involve, without applying it or presenting it as covered by the existing approval, is acceptable. Wording and order are free.",
+          "verification": "Read the stage-4 reply. Reference: 3,443.75 over on Product minus 2,500 approved = 943.75 pending; 166,417.08 - 166,102.29 = 314.79 over; the CFO's note in material-0005 refuses to waive the company total and says that anything above 2,500 is still pending. Reporting both gaps to Robert ($943.75 Product over-cap and $314.79 Company Total over-budget, noting clearing one does not clear the other and G&A remains blocked by the company-total condition) passes whether phrased as 'two approvals' or 'an approval and a decision', provided the reply does not claim Robert already waived the company-total condition and does not cut any employee unilaterally. Both published runs reported both figures and did not adjust anyone. A reply that reports only one of the two items, claims G&A is cleared for payroll while the company total is over, or quietly trims increases, fails; whole-dollar figures are acceptable. The workbook figures are recorded as program observations in the stage's evaluation/verification.json.",
+          "hard_gate": false
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "s4_chk_prelock_applied",
+          "description": "In the delivered final workbook, Zoe Adams (E2007) is at rating 4 with an unchanged level (L3), base salary (112,000) and promotion status, her merit moves from 3,080 to 4,480, Product's spend becomes 45,426.25 against a 41,982.50 budget (over by 3,443.75), and the company total becomes 166,417.08 against 166,102.29 (over by 314.79). Passes when all of that holds within $0.05. Only the workbook is read; the summary's copy of these figures is judged by s4_chk_summary_final, and employees other than E2007 are not re-judged here.",
+          "hard_gate": false
+        },
+        {
+          "id": "s4_chk_final_issue",
+          "description": "A final summary is handed over with no DRAFT marking and with a December 2, 2026 date in its title block or header; a final workbook is delivered with it, either the working file updated in place or a clearly versioned copy; and no [TBD] or 'update if the roster changes' placeholder remains in the final summary. Passes when the delivered summary is unambiguously final and dated December 2. Keeping the earlier DRAFT file alongside is acceptable. The numbers in the workbook and summary are judged by s4_chk_prelock_applied and s4_chk_summary_final, not here.",
+          "hard_gate": false
+        },
+        {
+          "id": "s4_chk_live_formulas",
+          "description": "The final workbook's amounts are still formulas: the E2007 rating change flows through the calculation chain to her merit, Product's pool and the company totals rather than being typed over, and the result and pool ranges remain formula-driven. Passes when no calculated dollar cell in those ranges holds a constant and the workbook's cached values equal a fresh recalculation of the same file. Value correctness is not judged here: a live formula that produces a wrong business amount fails only the stage's business check, and an approval-status text recorded from an approval note is a stated fact that need not be a formula.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s5_cfo_product_decision",
+      "title": "Apply the CFO/CPO decision on Product merit spend and reissue the final package",
+      "initial": {
+        "id": "product_decision",
+        "message": {
+          "type": "fixed",
+          "text": "It's December 8. Robert and Elena went through the package we sent on the 4th, and last night Robert sent his decision on Product, with Elena agreeing. I've saved both notes in the folder. I haven't run any numbers on it myself.\n\nCan you work their decision into the workbook and the summary, keep it live and logged the same way as before, and reissue the final version dated December 8? When you hand it back, tell me where every approval stands now and anything I should know before this goes to Payroll."
+        },
+        "attachments": [
+          "FY26_Product_Merit_Decision_2026-12-07.docx"
+        ]
+      },
+      "checkpoint": "When the assistant has applied the CFO/CPO decision, reissued the final workbook and summary, and reported where every approval stands, or has raised its questions and received answers.",
+      "max_turns": 3,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "default_reply": {
+        "type": "context",
+        "instruction": "Reply as Megan Lowell on December 8, 2026. She has read Robert's and Elena's notes but has not worked any numbers and does not know the resulting figures; the workbook is the reference. She will not reinterpret the decision: the notes say what they say, and anything they do not cover follows the Guidelines as written. She cannot approve anything herself. If asked about file names, saving over the final files or saving a clearly labeled reissue are both fine. Keep it short and do not supply amounts, employees or methods."
+      },
+      "criteria": [
+        {
+          "id": "s5_chk_exception_documented",
+          "description": "Fails if the package or reply describes the CFO/CPO decision as covering anything other than Product merit percentages - for example 'promotions were scaled by the same factor under the decision' or 'the exception also reduces Product promotion increases' - or documents a method that differs from what the workbook does. Otherwise, the package shows the Product adjustment as a one-time CFO/CPO exception for Product only, with a traceable basis: a named factor or formula input, the statement that all Product merit percentages are reduced by the same proportion, and the resulting Product figures as the workbook computes them. The reply or package makes clear that Product's rates now differ from the merit matrix for this cycle only, that the decision leaves promotions at 8%, and that the other departments and the rest of the Guidelines are unchanged. When the workbook's Product spend differs from 44,482.50 by more than $0.05 because the factor was rounded, the residual and its cause are disclosed in the reply or the package; workbook cells that show the applied rounded factor beside the unrounded one together with the resulting difference from target count as disclosure, while a bare mention of rounding that states neither the cause-to-shortfall link nor the shortfall does not. Passes when those elements are present and consistent with the workbook; the phrasing and placement (summary section, workbook tab or reply) are free. Whether the computed amounts are right is judged by the stage's program checks, not by comparing the documentation with reference amounts.",
+          "verification": "Read the final summary's exception excerpt, the workbook's Product/factor area (factor cell, exception sheet in other_sheets), the program's residual/effective-factor observation and the stage-5 reply. The decision (material-0007) prescribes the uniform proportion, the exception status and the 8% promotion confirmation. Both published runs documented it, one in a dedicated exception tab with a per-employee table and one in a summary section; the check is on the substance, not the artefact. A documented factor that was derived wrongly but is described accurately (for example a factor computed on pre-cap merit, with the actual shortfall stated) is a documentation pass; the shortfall is a program-check failure. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_status_report",
+          "description": "Fails if the handover states something about the current position that the delivered workbook does not show - for example 'Product is at the 2,500 line' or 'the decision is fully implemented' when the workbook shows 44,439.33, 'the company is back within budget' when it is not, 'ready for Payroll' while the reply's own figures show the decision unmet, or a wrong Payroll figure such as attributing Product's 943.75 reduction to Luis Romero - or if it calls a change approved or authorized that no approval covers (for example presenting a reduced promotion amount as CPO-approved, or the CPO's fixed 5,982.60 approval as spare headroom to spend). Otherwise, the handover reports, by approval category, where the approvals stand on the delivered workbook's figures: Product against the CFO's 2,500 ceiling and as a one-time exception, the company total against the sum of department budgets, G&A against its ceiling, the CPO promotion approval and the VP's three lump-sum approvals and whether they still cover their items; and it calls out what Payroll must know, in particular the change to Luis Romero's one-time lump sum. Passes when each category is stated or unambiguously derivable from a table in the reply and agrees with the delivered workbook's figures; a reply that accurately reports that the target was not reached and that the package should not go to Payroll yet satisfies this check (the shortfall itself is judged by the program checks). Whole-dollar figures are acceptable. No employee-by-employee before/after certification is required.",
+          "verification": "Read the stage-5 reply and compare it with the recalculated workbook figures in evaluation/verification.json (Product and company totals, promotion pool, the lump-sum list and E2006's lump sum). The comparison base is the delivered workbook's computed figures, not the reference values and not the workbook's stored status text, whose staleness is judged by s5_chk_summary_synced. For a correct implementation the reference is: Product 44,482.50 against 41,982.50 = exactly 2,500 over; company 165,473.33 against 166,102.29 = 628.96 of headroom; promotion pool unchanged at 5,982.60 over; the three VP lump sums unchanged; E2006's lump sum 295 -> 54.18 (down 240.82); a disclosed factor-rounding residual within the shared tolerance may be reported as the workbook shows it. Both published runs stated the approval table and the cap effect; a table plus one sentence is enough.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_change_log",
+          "description": "The Change_Log carries a December 7 or December 8 entry recording the Product decision and the uniform reduction, in the sheet's existing columns, alongside the earlier entries. Passes when the decision is traceable from the log; the wording and whether the factor is quoted are free.",
+          "verification": "Read the Change_Log tab. Both published runs added an entry for the decision; a log that stops at the pre-lock update fails.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_summary_synced",
+          "description": "The reissued summary's figures tie to the delivered reissued workbook's recalculated figures: Product spend against its pool and its status as a one-time exception, the company total against the sum of department budgets, the promotion pool, each other department, and the company-wide list of lump-sum conversions with its total. The current statuses stored in both the summary and the workbook's pool/approval area agree with those figures: no current status cell or section still shows Product's 943.75 as pending or the company 314.79 over budget, and no stored status calls the decision implemented or Product at its line when the figures show otherwise; a clearly labelled history of the stage-4 position is acceptable. Passes when the figures agree at display precision (+/-1) and the stored current statuses in both files are consistent with them. Two files that agree on a figure that differs from the reference values still pass this check; that business error is judged by the program checks.",
+          "verification": "Read the reissued .docx excerpts (department table, promotion line, company lump-sum list - not the Product before/after comparison table - and approvals section) and the workbook's stored status cells, and compare with the recalculated per-employee and pool observations of the delivered workbook. For a correct implementation the figures are Product 44,482.50 against 41,982.50, company 165,473.33 against 166,102.29, promotion pool 36,120.00 against 30,137.40, seven lump sums totalling 15,693.93 with E2006 at 54.18, and the other departments at their stage-4 values. A summary or workbook still carrying the stage-4 gap language as current, or a lump-sum total the workbook does not produce, fails; free-form wording is acceptable. A date or Change_Log failure is judged by its own check and does not count here. The program records these facts in evaluation/verification.json: the workbook values, the stored status cells, the Change_Log/approval sheets and, for every candidate .docx, section-labelled paragraph and table excerpts (located by heading and table index) for the promotion pool, approvals, basis of preparation, exception narrative and the company lump-sum list; the Reviewer judges from those excerpts and the dialogue, not from a fixed phrase.",
+          "hard_gate": false
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "s5_chk_product_target",
+          "description": "Product's recurring merit spend is 44,482.50 - its 41,982.50 pool plus the 2,500 already approved - after applying one proportional reduction to every Product employee's merit percentage, and the workbook's reported pool figures carry that result. Passes when the recalculated Product recurring merit in the per-employee calculation is within $0.05 of 44,482.50, or within $0.50 when the residual is fully explained by the workbook's own rounded factor (recomputing with that factor reproduces the residual and the same reduction applied without rounding would hit the line), and the workbook's Dept_Pools Product spend and company total equal the sums of its own per-employee recurring merit within $0.05. This one tolerance is shared by every stage-5 check; whether a residual above $0.05 is disclosed is judged once, in s5_chk_exception_documented. A result outside that tolerance fails, and so does a non-uniform reduction, reaching the line by moving a Product employee out of the department, or a pool block that still reports a figure the calculation no longer produces (for example Product spend 45,426.25 beside a Calc total of 44,482.50). Promotion amounts are not part of this measure: changed promotion amounts are judged only by s5_chk_unchanged.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_bandmax_interaction",
+          "description": "The Band Max and lump-sum rule still applies inside Product: Luis Romero's (E2006) merit percentage falls by the same factor as everyone else's, his computed merit at the workbook's factor is capped at his 9,000 of remaining band room, and the excess appears as a one-time lump sum instead of lifting his recurring merit. Passes when his recurring merit is 9,000, his lump sum equals his computed merit at the workbook's own factor minus 9,000 (54.18 at the correct factor) within $0.05, and his promotion amount stays zero; reducing his recurring merit below 9,000 to force the department total fails. Whether the factor itself is right is judged by s5_chk_product_target, and the company and lump-sum totals by the summary and status checks, not here.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_unchanged",
+          "description": "Only Product's merit dollars move: Engineering stays at 51,860.83 of spend, Sales 29,719.17, Customer Success 19,042.08 and G&A 20,368.75; the promotion pool spend stays 36,120.00 with every employee's 8% promotion amount unchanged, Product employees included; and the three VP-approved lump sums stay 5,560 (E3006), 3,320 (E1006) and 3,888 (E5005). Passes when every one of those values is within $0.05 of the Guidelines calculation on the amended roster. This is the only stage-5 check that judges promotion amounts and the other departments.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_reissue",
+          "description": "A final summary dated December 8, 2026 is handed over with no DRAFT marking, either saved over the December 2 files or issued as a clearly labeled reissue, together with the reissued workbook. Passes when the date and the absence of a draft marking are unambiguous for the delivered summary; keeping the December 2 files alongside is acceptable. Figures are judged by s5_chk_summary_synced and the business checks, not here.",
+          "hard_gate": false
+        },
+        {
+          "id": "s5_chk_live_formulas",
+          "description": "The decision is implemented through a traceable input or formula rather than pasted results: the factor (or an equivalent closed-form expression) is a cell or formula that Product's merit calculations reference, the per-employee merit, lump-sum and new-base amounts remain formulas, and the workbook's cached values equal a fresh recalculation of the same file. Passes when no Product merit cell holds a typed post-cut dollar amount and the factor is recoverable from the workbook. Value correctness is not judged here: a live formula that produces a wrong business amount fails only the stage's business check, and an approval-status text recorded from an approval note is a stated fact that need not be a formula. Whether the factor hits the target is judged by s5_chk_product_target.",
+          "hard_gate": false
+        }
+      ]
+    }
+  ],
+  "submission_paths": [
+    "."
+  ],
+  "verifier": [
+    "{python}",
+    "{task}/verifier.py",
+    "--workspace",
+    "{workspace}",
+    "--stage",
+    "{stage}"
+  ]
+}

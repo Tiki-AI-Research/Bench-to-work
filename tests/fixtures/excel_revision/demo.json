@@ -1,0 +1,26 @@
+{
+  "mode": "Offline deterministic demo (validates Runner orchestration without LLM calls)",
+  "user": {
+    "type": "command",
+    "supports_text_only": true,
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/excel_revision/demo_agent.py"
+    ]
+  },
+  "worker": {
+    "type": "command",
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/excel_revision/demo_agent.py"
+    ]
+  },
+  "reviewer": {
+    "type": "command",
+    "supports_text_only": true,
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/excel_revision/demo_agent.py"
+    ]
+  }
+}

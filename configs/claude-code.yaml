@@ -1,0 +1,23 @@
+# Claude Code CLI Worker benchmark job configuration.
+#   scripts/run.sh --job claude-code [--task <task_id>]
+
+dataset: tasks
+task_names: []
+exclude_task_names: []
+
+worker:
+  harness: claude-code
+  model: claude-sonnet-5-5
+  effort: high
+  base_url: https://api.anthropic.com
+  key_env: ANTHROPIC_API_KEY
+  timeout: 3600
+
+roles: configs/roles/pi-openai.json
+reward: bench_to_work.rewards:stage_scores
+
+n_attempts: 1
+n_concurrent_trials: 2
+jobs_dir: jobs
+verifier_timeout: 300
+reviewer_protocol_retry_limit: 2

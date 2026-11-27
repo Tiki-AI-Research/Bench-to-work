@@ -1,0 +1,45 @@
+{
+  "mode": "Harbor single-task MainAgent example",
+  "user": {
+    "type": "pi",
+    "api": "openai-responses",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-6.1-terra",
+    "thinking_level": "medium",
+    "key_env": "OPENAI_API_KEY",
+    "timeout": 180,
+    "max_model_turns": 12,
+    "supports_images": false
+  },
+  "reviewer": {
+    "type": "pi",
+    "api": "openai-responses",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-6.2-sol",
+    "thinking_level": "high",
+    "key_env": "OPENAI_API_KEY",
+    "timeout": 300,
+    "max_model_turns": 24,
+    "supports_images": false,
+    "max_tokens": 16384
+  },
+  "worker": {
+    "command": [
+      "python3",
+      "/opt/worker.py",
+      "--harness",
+      "codex",
+      "--model",
+      "gpt-6.2-sol",
+      "--base-url",
+      "https://api.openai.com/v1",
+      "--key-env",
+      "OPENAI_API_KEY"
+    ],
+    "env_vars": ["OPENAI_API_KEY"],
+    "timeout": 300
+  },
+  "workspace": {
+    "root": "/workspace"
+  }
+}

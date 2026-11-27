@@ -1,0 +1,49 @@
+{
+  "mode": "Controller roles (User & Reviewer via Pi OpenAI Responses API; Progress Judge via OpenAI chat API)",
+  "user": {
+    "type": "pi",
+    "api": "openai-responses",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-6.1-terra",
+    "thinking_level": "medium",
+    "key_env": "OPENAI_API_KEY",
+    "timeout": 1800,
+    "max_model_turns": 64,
+    "supports_images": false,
+    "max_tokens": 32768,
+    "context_window": 131072
+  },
+  "reviewer": {
+    "type": "python",
+    "factory": "bench_to_work.agents:make_review",
+    "api": "openai-responses",
+    "rechecks": 1,
+    "retries": 1,
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-6.2-sol",
+    "thinking_level": "high",
+    "key_env": "OPENAI_API_KEY",
+    "timeout": 3600,
+    "max_model_turns": 256,
+    "supports_images": false,
+    "max_tokens": 32768,
+    "context_window": 131072
+  },
+  "progress_reviewer": {
+    "type": "python",
+    "factory": "bench_to_work.agents:make_text",
+    "base_url": "https://api.openai.com/v1",
+    "model": "gpt-6.2-sol",
+    "key_env": "OPENAI_API_KEY",
+    "stream": true,
+    "include_usage": true,
+    "timeout": 900,
+    "read_timeout": 300,
+    "max_tokens": 32768,
+    "max_tokens_field": "max_completion_tokens",
+    "temperature": null,
+    "max_retries": 0,
+    "retries": 3,
+    "wait": 10
+  }
+}

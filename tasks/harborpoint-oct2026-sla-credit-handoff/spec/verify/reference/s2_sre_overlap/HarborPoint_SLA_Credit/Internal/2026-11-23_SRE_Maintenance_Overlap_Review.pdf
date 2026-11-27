@@ -1,0 +1,114 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 4287 >>
+stream
+BT /F3 10.5 Tf 60.00 718.35 Td (Email Ч printed from Outlook) Tj ET
+BT /F1 10 Tf 60.00 699.35 Td (From: Priya Nair <priya.nair@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 685.35 Td (To: Marcus Lee <marcus.lee@arcadialedger.com>; Jordan Ellis <jordan.ellis@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 671.35 Td (Cc: Dana Whitfield <dana.whitfield@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 657.35 Td (Date: Mon, Nov 23, 2026 5:48 PM ET) Tj ET
+BT /F1 10 Tf 60.00 643.35 Td (Subject: RE: Approval request Ч Harbor Point Oct 2026 SLA credit \(HP-4452\)) Tj ET
+BT /F1 10.5 Tf 60.00 628.70 Td () Tj ET
+BT /F1 10.5 Tf 60.00 613.05 Td (Marcus, Jordan Ч maintenance overlap review below, per Marcus's 11/19 request.) Tj ET
+BT /F2 10.5 Tf 60.00 593.40 Td (Maintenance Overlap Review Ч Harbor Point Logistics \(ARC-10482\), October 2026) Tj ET
+BT /F3 10.5 Tf 60.00 573.75 Td (Prepared by Priya Nair, SRE Incident Manager. Sources: status monitoring, incident timelines, change) Tj ET
+BT /F3 10.5 Tf 60.00 560.10 Td (calendar, maintenance notification service log.) Tj ET
+0.5 w 60.00 536.85 88.92 17.25 re S
+BT /F2 9 Tf 63.00 541.85 Td (Customer ticket) Tj ET
+0.5 w 148.92 536.85 53.35 17.25 re S
+BT /F2 9 Tf 151.92 541.85 Td (Incident) Tj ET
+0.5 w 202.27 536.85 59.28 17.25 re S
+BT /F2 9 Tf 205.27 541.85 Td (Date) Tj ET
+0.5 w 261.54 536.85 124.48 17.25 re S
+BT /F2 9 Tf 264.54 541.85 Td (Unavailable \(ET\)) Tj ET
+0.5 w 386.02 536.85 41.49 17.25 re S
+BT /F2 9 Tf 389.02 541.85 Td (Minutes) Tj ET
+0.5 w 427.52 536.85 124.48 17.25 re S
+BT /F2 9 Tf 430.52 541.85 Td (Maintenance overlap) Tj ET
+0.5 w 60.00 519.60 88.92 17.25 re S
+BT /F1 9 Tf 63.00 524.60 Td (HP-4410) Tj ET
+0.5 w 148.92 519.60 53.35 17.25 re S
+BT /F1 9 Tf 151.92 524.60 Td (INC-77514) Tj ET
+0.5 w 202.27 519.60 59.28 17.25 re S
+BT /F1 9 Tf 205.27 524.60 Td (Wed Oct 7) Tj ET
+0.5 w 261.54 519.60 124.48 17.25 re S
+BT /F1 9 Tf 264.54 524.60 Td (2:05 PM Ц 3:41 PM) Tj ET
+0.5 w 386.02 519.60 41.49 17.25 re S
+BT /F1 9 Tf 389.02 524.60 Td (96) Tj ET
+0.5 w 427.52 519.60 124.48 17.25 re S
+BT /F1 9 Tf 430.52 524.60 Td (None) Tj ET
+0.5 w 60.00 502.35 88.92 17.25 re S
+BT /F1 9 Tf 63.00 507.35 Td (HP-4431) Tj ET
+0.5 w 148.92 502.35 53.35 17.25 re S
+BT /F1 9 Tf 151.92 507.35 Td (INC-77821) Tj ET
+0.5 w 202.27 502.35 59.28 17.25 re S
+BT /F1 9 Tf 205.27 507.35 Td (Thu Oct 15) Tj ET
+0.5 w 261.54 502.35 124.48 17.25 re S
+BT /F1 9 Tf 264.54 507.35 Td (12:52 AM Ц 3:12 AM) Tj ET
+0.5 w 386.02 502.35 41.49 17.25 re S
+BT /F1 9 Tf 389.02 507.35 Td (140) Tj ET
+0.5 w 427.52 502.35 124.48 17.25 re S
+BT /F1 9 Tf 430.52 507.35 Td (CHG-24117 \(see below\)) Tj ET
+0.5 w 60.00 485.10 88.92 17.25 re S
+BT /F1 9 Tf 63.00 490.10 Td (HP-4433) Tj ET
+0.5 w 148.92 485.10 53.35 17.25 re S
+BT /F1 9 Tf 151.92 490.10 Td (INC-77821) Tj ET
+0.5 w 202.27 485.10 59.28 17.25 re S
+BT /F1 9 Tf 205.27 490.10 Td (Thu Oct 15) Tj ET
+0.5 w 261.54 485.10 124.48 17.25 re S
+BT /F1 9 Tf 264.54 490.10 Td (Same event as HP-4431) Tj ET
+0.5 w 386.02 485.10 41.49 17.25 re S
+BT /F1 9 Tf 389.02 490.10 Td (Ч) Tj ET
+0.5 w 427.52 485.10 124.48 17.25 re S
+BT /F1 9 Tf 430.52 490.10 Td (Counted under HP-4431) Tj ET
+BT /F1 10.5 Tf 60.00 461.45 Td (INC-77821 cause: the replica resync step for CHG-24117 was started early \(12:52 AM\) and triggered a) Tj ET
+BT /F1 10.5 Tf 60.00 447.80 Td (failover loop. Service was restored at 3:12 AM.) Tj ET
+BT /F1 10.5 Tf 60.00 428.15 Td (CHG-24117 announced maintenance window: Thursday, October 15, 1:00 AM Ц 2:00 AM ET.) Tj ET
+BT /F1 10.5 Tf 60.00 408.50 Td (Customer notification: sent Monday, October 5, 10:14 AM ET by the maintenance notification service.) Tj ET
+BT /F1 10.5 Tf 60.00 394.85 Td (Recipients on file in the notification service for tenant ARC-10482: itops-notify@harborpointlogistics.com.) Tj ET
+BT /F1 10.5 Tf 60.00 375.20 Td (Minutes of INC-77821 inside the announced window: 60 \(1:00Ц2:00 AM\). Outside the window: 8) Tj ET
+BT /F1 10.5 Tf 60.00 361.55 Td (\(12:52Ц1:00 AM\) + 72 \(2:00Ц3:12 AM\) = 80.) Tj ET
+BT /F1 10.5 Tf 60.00 341.90 Td (SRE confirms times and notification records only. Whether any exclusion applies under the customer's) Tj ET
+BT /F1 10.5 Tf 60.00 328.25 Td (contract is a Customer Success decision.) Tj ET
+BT /F1 10.5 Tf 60.00 308.60 Td (Ч Priya) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 1 of 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Title (2026-11-23 SRE Maintenance Overlap Review) /Producer (Arcadia Ledger document export) >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000320 00000 n 
+0000000425 00000 n 
+0000004764 00000 n 
+0000004910 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
+startxref
+5025
+%%EOF

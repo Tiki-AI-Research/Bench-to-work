@@ -1,0 +1,152 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 5496 >>
+stream
+BT /F2 12 Tf 60.00 716.40 Td (Arcadia Ledger, Inc. ó Customer Success) Tj ET
+BT /F2 13 Tf 60.00 693.50 Td (CS-SOP-014: Service Credit Review and Approval) Tj ET
+BT /F3 10.5 Tf 60.00 673.85 Td (Revision 2026-07 | Owner: Director, Customer Success | Internal use only) Tj ET
+BT /F2 10.5 Tf 60.00 654.20 Td (1. Scope) Tj ET
+BT /F1 10.5 Tf 60.00 634.55 Td (This procedure applies to customer requests for SLA service credits under a customer's MSA) Tj ET
+BT /F1 10.5 Tf 60.00 620.90 Td (service-level exhibit.) Tj ET
+BT /F2 10.5 Tf 60.00 601.25 Td (2. Roles) Tj ET
+0.5 w 60.00 578.00 148.74 17.25 re S
+BT /F2 9 Tf 63.00 583.00 Td (Role) Tj ET
+0.5 w 208.74 578.00 343.26 17.25 re S
+BT /F2 9 Tf 211.74 583.00 Td (Responsibility) Tj ET
+0.5 w 60.00 538.25 148.74 39.75 re S
+BT /F1 9 Tf 63.00 565.75 Td (Account CSM) Tj ET
+0.5 w 208.74 538.25 343.26 39.75 re S
+BT /F1 9 Tf 211.74 565.75 Td (Owns the claim: assembles evidence, maintains the SLA workbook and case ledger,) Tj ET
+BT /F1 9 Tf 211.74 554.50 Td (drafts customer communications, routes for approval, submits the Credit Memo) Tj ET
+BT /F1 9 Tf 211.74 543.25 Td (Request.) Tj ET
+0.5 w 60.00 509.75 148.74 28.50 re S
+BT /F1 9 Tf 63.00 526.00 Td (SRE Incident Manager) Tj ET
+0.5 w 208.74 509.75 343.26 28.50 re S
+BT /F1 9 Tf 211.74 526.00 Td (Confirms incident start/end times and any overlap with maintenance windows and) Tj ET
+BT /F1 9 Tf 211.74 514.75 Td (notification records. SRE does not decide contractual eligibility.) Tj ET
+0.5 w 60.00 492.50 148.74 17.25 re S
+BT /F1 9 Tf 63.00 497.50 Td (CS Manager) Tj ET
+0.5 w 208.74 492.50 343.26 17.25 re S
+BT /F1 9 Tf 211.74 497.50 Td (Approves credits within Level 1 authority.) Tj ET
+0.5 w 60.00 475.25 148.74 17.25 re S
+BT /F1 9 Tf 63.00 480.25 Td (Director, Customer Success) Tj ET
+0.5 w 208.74 475.25 343.26 17.25 re S
+BT /F1 9 Tf 211.74 480.25 Td (Approves credits within Level 2 authority; decides exclusion and eligibility disputes.) Tj ET
+0.5 w 60.00 458.00 148.74 17.25 re S
+BT /F1 9 Tf 63.00 463.00 Td (VP Finance) Tj ET
+0.5 w 208.74 458.00 343.26 17.25 re S
+BT /F1 9 Tf 211.74 463.00 Td (Co-approves Level 3 credits.) Tj ET
+0.5 w 60.00 440.75 148.74 17.25 re S
+BT /F1 9 Tf 63.00 445.75 Td (Billing Operations) Tj ET
+0.5 w 208.74 440.75 343.26 17.25 re S
+BT /F1 9 Tf 211.74 445.75 Td (Issues credit memos and applies them to invoices.) Tj ET
+BT /F2 10.5 Tf 60.00 417.10 Td (3. Approval Authority) Tj ET
+0.5 w 60.00 393.85 32.80 17.25 re S
+BT /F2 9 Tf 63.00 398.85 Td (Level) Tj ET
+0.5 w 92.80 393.85 190.24 17.25 re S
+BT /F2 9 Tf 95.80 398.85 Td (Credit amount \(per claim\)) Tj ET
+0.5 w 283.04 393.85 268.96 17.25 re S
+BT /F2 9 Tf 286.04 398.85 Td (Required approver) Tj ET
+0.5 w 60.00 376.60 32.80 17.25 re S
+BT /F1 9 Tf 63.00 381.60 Td (1) Tj ET
+0.5 w 92.80 376.60 190.24 17.25 re S
+BT /F1 9 Tf 95.80 381.60 Td (Up to and including $2,500.00) Tj ET
+0.5 w 283.04 376.60 268.96 17.25 re S
+BT /F1 9 Tf 286.04 381.60 Td (CS Manager) Tj ET
+0.5 w 60.00 359.35 32.80 17.25 re S
+BT /F1 9 Tf 63.00 364.35 Td (2) Tj ET
+0.5 w 92.80 359.35 190.24 17.25 re S
+BT /F1 9 Tf 95.80 364.35 Td ($2,500.01 to $10,000.00) Tj ET
+0.5 w 283.04 359.35 268.96 17.25 re S
+BT /F1 9 Tf 286.04 364.35 Td (Director, Customer Success) Tj ET
+0.5 w 60.00 342.10 32.80 17.25 re S
+BT /F1 9 Tf 63.00 347.10 Td (3) Tj ET
+0.5 w 92.80 342.10 190.24 17.25 re S
+BT /F1 9 Tf 95.80 347.10 Td (Over $10,000.00) Tj ET
+0.5 w 283.04 342.10 268.96 17.25 re S
+BT /F1 9 Tf 286.04 347.10 Td (Director, Customer Success and VP Finance) Tj ET
+BT /F1 10.5 Tf 60.00 318.45 Td (An approver at a higher level may approve a credit that falls within a lower level's authority.) Tj ET
+BT /F2 10.5 Tf 60.00 298.80 Td (4. Validity of Approvals) Tj ET
+BT /F1 10.5 Tf 60.00 279.15 Td (An approval is valid only for the specific amount and credit tier it states, and only once any conditions) Tj ET
+BT /F1 10.5 Tf 60.00 265.50 Td (stated in the approval have been met. If the calculated amount or tier changes, or a stated condition is not) Tj ET
+BT /F1 10.5 Tf 60.00 251.85 Td (met, the CSM must obtain a new approval at the level required for the new amount. Record each approval) Tj ET
+BT /F1 10.5 Tf 60.00 238.20 Td (in the case ledger with the approver, date, amount, tier, and any conditions.) Tj ET
+BT /F2 10.5 Tf 60.00 218.55 Td (5. Exclusions and Eligibility Disputes) Tj ET
+BT /F1 10.5 Tf 60.00 198.90 Td (If a customer disputes the application of an exclusion, or eligibility turns on interpretation of the contract,) Tj ET
+BT /F1 10.5 Tf 60.00 185.25 Td (the Director, Customer Success decides, consulting Legal as needed. Until the decision, the CSM keeps) Tj ET
+BT /F1 10.5 Tf 60.00 171.60 Td (both calculations \(with and without the disputed exclusion\) in the SLA workbook and does not represent) Tj ET
+BT /F1 10.5 Tf 60.00 157.95 Td (either outcome to the customer as final.) Tj ET
+BT /F2 10.5 Tf 60.00 138.30 Td (6. Customer Communications) Tj ET
+BT /F1 10.5 Tf 60.00 118.65 Td (6.1 Before an approval is recorded, the CSM may share the calculation with the customer as preliminary.) Tj ET
+BT /F1 10.5 Tf 60.00 105.00 Td (The CSM must not describe a credit as approved or final, and must not commit to a specific invoice.) Tj ET
+BT /F1 10.5 Tf 60.00 85.35 Td (6.2 After approval, confirm to the customer the service month, uptime percentage, credit tier, credit) Tj ET
+BT /F1 10.5 Tf 60.00 71.70 Td (amount, and the invoice to which the credit memo will be applied under Section 7.) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 1 of 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 1961 >>
+stream
+BT /F1 10.5 Tf 60.00 718.35 Td (6.3 If a customer has received incorrect or premature information about a credit, correct it in writing) Tj ET
+BT /F1 10.5 Tf 60.00 704.70 Td (promptly.) Tj ET
+BT /F1 10.5 Tf 60.00 685.05 Td (6.4 Customer emails are sent by the account CSM from their own mailbox.) Tj ET
+BT /F2 10.5 Tf 60.00 665.40 Td (7. Credit Memo Request \(CMR\) and Invoice Timing) Tj ET
+BT /F1 10.5 Tf 60.00 645.75 Td (7.1 After approval, the CSM submits a Credit Memo Request to Billing Operations) Tj ET
+BT /F1 10.5 Tf 60.00 632.10 Td (\(billing-ops@arcadialedger.com\) containing: customer legal name; account ID; MSA and Order Form) Tj ET
+BT /F1 10.5 Tf 60.00 618.45 Td (references; service month; Monthly Uptime Percentage; credit tier; credit amount; approver name and) Tj ET
+BT /F1 10.5 Tf 60.00 604.80 Td (approval date; and the claim ticket number.) Tj ET
+BT /F1 10.5 Tf 60.00 585.15 Td (7.2 Billing Operations issues each service credit as a separate credit memo, which is applied to the next) Tj ET
+BT /F1 10.5 Tf 60.00 571.50 Td (invoice generated after the CMR is received. The credit memo number is referenced on that invoice.) Tj ET
+BT /F1 10.5 Tf 60.00 551.85 Td (7.3 Monthly invoice runs close at 5:00 PM ET on the 25th of each month \(or the prior Business Day if the) Tj ET
+BT /F1 10.5 Tf 60.00 538.20 Td (25th is not a Business Day\) and produce the invoices dated the 1st of the following month. CMRs) Tj ET
+BT /F1 10.5 Tf 60.00 524.55 Td (received after a run closes are applied in the following month's run.) Tj ET
+BT /F2 10.5 Tf 60.00 504.90 Td (8. Records) Tj ET
+BT /F1 10.5 Tf 60.00 485.25 Td (The case ledger in the SLA workbook is the working record of status for each claim. Update it with dates) Tj ET
+BT /F1 10.5 Tf 60.00 471.60 Td (and references when customer communications are sent, approvals are received, and CMRs are) Tj ET
+BT /F1 10.5 Tf 60.00 457.95 Td (submitted.) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 2 of 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Title (Service Credit Approval SOP CS-SOP-014) /Producer (Arcadia Ledger document export) >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000000431 00000 n 
+0000005979 00000 n 
+0000006125 00000 n 
+0000008138 00000 n 
+0000008284 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R /Info 10 0 R >>
+startxref
+8397
+%%EOF

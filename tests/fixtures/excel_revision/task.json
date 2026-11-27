@@ -1,0 +1,201 @@
+{
+  "id": "excel_revision_001",
+  "title": "Sales Report: Clean Up, Merge Missing Orders, and Apply Corrections",
+  "persona": "You are Lin Chen, operations lead for a small retail team. You know the order workflow well, are not fluent in Excel formulas, speak concisely and directly, and do not comment on technical implementation details.",
+  "background": "Preparing the August 2026 sales review using synthetic data denominated in USD. Keep updating the same Excel workbook across turns rather than creating separate files that drop earlier context.",
+  "verifier": [
+    "{python}",
+    "{task}/verifier.py",
+    "--workspace",
+    "{workspace}",
+    "--stage",
+    "{stage}"
+  ],
+  "stages": [
+    {
+      "id": "s1",
+      "title": "Clean up the initial sales workbook",
+      "initial": {
+        "id": "prepare",
+        "attachments": [
+          {
+            "path": "materials/sales_source.xlsx",
+            "kind": "file"
+          }
+        ],
+        "message": {
+          "type": "context",
+          "instruction": "Ask the Worker to clean up materials/sales_source.xlsx and save it as output/sales_report.xlsx while keeping the source file unchanged. Express these constraints: keep only the 'Orders' and 'Summary' worksheets with their existing headers; format monetary columns to two decimal places and freeze the header row in 'Orders'; OrderID is the unique key and no records may be dropped. State that all orders belong to August 2026 and no region filtering is needed. Require NetAmount in 'Orders' to use the formula Quantity * UnitPrice - Refund, and 'Summary' to aggregate NetAmount via formulas for East, South, North, and Total, preserving these rules in later revisions. Ask for a brief summary of changes."
+        }
+      },
+      "checkpoint": "Enter formal review when the Worker reports finishing the cleanup or attempts to deliver output/sales_report.xlsx. Judge from conversation only; file existence and accuracy are checked during submission verification.",
+      "max_turns": 2,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "verifier_checks": [
+        {
+          "id": "source_intact",
+          "description": "Published source materials remain unmodified",
+          "hard_gate": true
+        },
+        {
+          "id": "rows_correct",
+          "description": "All 5 orders are unique with complete and accurate fields",
+          "hard_gate": true
+        },
+        {
+          "id": "formulas_work",
+          "description": "Orders and Summary use live formulas that recalculate when inputs change",
+          "hard_gate": true
+        },
+        {
+          "id": "totals_correct",
+          "description": "Regional and overall totals match independent order calculations",
+          "hard_gate": true
+        },
+        {
+          "id": "readable",
+          "description": "Monetary columns use two decimal places and Orders freezes the top row",
+          "hard_gate": false
+        }
+      ],
+      "criteria": [
+        {
+          "id": "change_explained",
+          "description": "Pass: reply states that NetAmount formulas and regional summaries were updated and provides the output path. Fail: reply only says done, omits the delivery path, or contradicts the workbook.",
+          "verification": "Compare the delivery reply, output/sales_report.xlsx, and programmatic observations. Verify that the reply gives the delivery path and explains the NetAmount and regional summary updates.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Merge missing orders from supplemental CSV",
+      "initial": {
+        "id": "add_missing",
+        "attachments": [
+          {
+            "path": "materials/missing_orders.csv",
+            "kind": "file"
+          }
+        ],
+        "message": {
+          "type": "context",
+          "instruction": "Inform the Worker that materials/missing_orders.csv just arrived and ask to merge the missing orders into the existing output/sales_report.xlsx by OrderID without duplicating identical existing orders. Emphasize keeping existing orders, NetAmount formulas, and regional summary formulas covering the newly added rows. Ask to deliver the same file path and briefly note added and deduplicated orders."
+        }
+      },
+      "checkpoint": "Enter formal review when the Worker reports merging the supplemental orders or attempts delivery. If the Worker only asks whether the supplemental file is confirmed, answer from the preset continuation without releasing the correction sheet early.",
+      "max_turns": 2,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [
+        {
+          "id": "confirm_version",
+          "when": "The Worker asks whether missing_orders.csv is confirmed and ready to merge. Not used for rework after a failed submission.",
+          "attachments": [],
+          "message": {
+            "type": "context",
+            "instruction": "Confirm that missing_orders.csv is the final approved supplement: keep all existing orders and count identical OrderID records only once."
+          }
+        }
+      ],
+      "verifier_checks": [
+        {
+          "id": "source_intact",
+          "description": "Published source materials remain unmodified",
+          "hard_gate": true
+        },
+        {
+          "id": "rows_correct",
+          "description": "7 unique orders: O106/O107 added, O103 deduplicated, prior fields preserved",
+          "hard_gate": true
+        },
+        {
+          "id": "formulas_work",
+          "description": "Formulas cover new rows and recalculate regional totals dynamically",
+          "hard_gate": true
+        },
+        {
+          "id": "totals_correct",
+          "description": "East 700, South 360, North 480, Total 1540",
+          "hard_gate": true
+        },
+        {
+          "id": "readable",
+          "description": "Monetary columns use two decimal places and Orders freezes the top row",
+          "hard_gate": false
+        }
+      ],
+      "criteria": [
+        {
+          "id": "change_explained",
+          "description": "Pass: explains that 2 orders were added, duplicate O103 was not double-counted, and cites the output path. Fail: omits key points or contradicts the workbook.",
+          "verification": "Compare the delivery reply, output/sales_report.xlsx, and programmatic observations against the source and supplemental files.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Apply targeted corrections while preserving prior state",
+      "initial": {
+        "id": "apply_corrections",
+        "attachments": [
+          {
+            "path": "materials/corrections.csv",
+            "kind": "file"
+          }
+        ],
+        "message": {
+          "type": "context",
+          "instruction": "Inform the Worker that Finance sent materials/corrections.csv and ask to update the specified OrderID and Field entries in the same output/sales_report.xlsx. Emphasize replacing only the named fields, keeping unmentioned orders and fields intact (including orders added in Stage 2), preserving live NetAmount and regional summary formulas, and briefly listing the corrections and output path."
+        }
+      },
+      "checkpoint": "Enter formal review when the Worker reports applying the corrections or attempts delivery.",
+      "max_turns": 2,
+      "needs_workspace": true,
+      "retry_limit": 0,
+      "continuations": [],
+      "verifier_checks": [
+        {
+          "id": "source_intact",
+          "description": "Published source materials remain unmodified",
+          "hard_gate": true
+        },
+        {
+          "id": "rows_correct",
+          "description": "All 7 orders preserved; only O102 Quantity=2, O103 Refund=80, and O106 Region=South changed",
+          "hard_gate": true
+        },
+        {
+          "id": "formulas_work",
+          "description": "Formulas still recalculate dynamically after quantity, refund, and region updates",
+          "hard_gate": true
+        },
+        {
+          "id": "totals_correct",
+          "description": "East 800, South 480, North 480, Total 1760",
+          "hard_gate": true
+        },
+        {
+          "id": "readable",
+          "description": "Monetary columns use two decimal places and Orders freezes the top row",
+          "hard_gate": false
+        }
+      ],
+      "criteria": [
+        {
+          "id": "change_explained",
+          "description": "Pass: lists the three updates (O102 Quantity, O103 Refund, O106 Region) consistent with the workbook and gives the output path. Fail: omits updates, misstates values, or only says done.",
+          "verification": "Compare the delivery reply, output/sales_report.xlsx, and programmatic observations field by field.",
+          "hard_gate": false
+        }
+      ]
+    }
+  ],
+  "submission_paths": [
+    "materials",
+    "output"
+  ]
+}

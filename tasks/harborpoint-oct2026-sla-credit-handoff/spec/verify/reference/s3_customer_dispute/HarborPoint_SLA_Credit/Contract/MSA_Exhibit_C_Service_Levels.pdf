@@ -1,0 +1,126 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R 9 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 4617 >>
+stream
+BT /F2 13 Tf 176.93 715.10 Td (MASTER SUBSCRIPTION AGREEMENT) Tj ET
+BT /F1 10.5 Tf 102.47 695.45 Td (between Arcadia Ledger, Inc. \("Provider"\) and Harbor Point Logistics, LLC \("Customer"\)) Tj ET
+BT /F2 12 Tf 135.11 673.85 Td (EXHIBIT C ó SERVICE LEVELS AND SERVICE CREDITS) Tj ET
+BT /F3 10.5 Tf 74.52 654.20 Td (MSA No. ARC-MSA-2025-0117 | Effective Date: March 1, 2025 | Customer Account ID: ARC-10482) Tj ET
+BT /F2 10.5 Tf 60.00 634.55 Td (1. Definitions) Tj ET
+BT /F1 10.5 Tf 60.00 614.90 Td (1.1 "Production Service" means the Arcadia AP Cloud production environment for Customer's tenant.) Tj ET
+BT /F1 10.5 Tf 60.00 595.25 Td (1.2 "Service Month" means a calendar month.) Tj ET
+BT /F1 10.5 Tf 60.00 575.60 Td (1.3 "Downtime" means a period during which the Production Service is unavailable to all or substantially) Tj ET
+BT /F1 10.5 Tf 60.00 561.95 Td (all of Customer's users, measured in whole minutes from the start of unavailability, as recorded by) Tj ET
+BT /F1 10.5 Tf 60.00 548.30 Td (Provider's monitoring or as reported by Customer and confirmed by Provider, until service is restored.) Tj ET
+BT /F1 10.5 Tf 60.00 534.65 Td (Degraded performance \(for example, slow page loads or delayed exports\) is not Downtime.) Tj ET
+BT /F1 10.5 Tf 60.00 515.00 Td (1.4 "Total Minutes" means the number of calendar days in the Service Month multiplied by 1,440.) Tj ET
+BT /F1 10.5 Tf 60.00 495.35 Td (1.5 "Monthly Uptime Percentage" means \(Total Minutes - Downtime minutes\) ˜ Total Minutes, expressed) Tj ET
+BT /F1 10.5 Tf 60.00 481.70 Td (as a percentage and rounded to two decimal places.) Tj ET
+BT /F1 10.5 Tf 60.00 462.05 Td (1.6 "Operational Notice Contacts" means the email addresses Customer designates in writing \(including) Tj ET
+BT /F1 10.5 Tf 60.00 448.40 Td (by support ticket\) to receive maintenance and operational notices. Customer may update its Operational) Tj ET
+BT /F1 10.5 Tf 60.00 434.75 Td (Notice Contacts at any time; an update is effective when Provider confirms it in writing.) Tj ET
+BT /F1 10.5 Tf 60.00 415.10 Td (1.7 "Business Day" means Monday through Friday, excluding U.S. federal holidays.) Tj ET
+BT /F1 10.5 Tf 60.00 395.45 Td (1.8 "Monthly Subscription Fee" means the recurring monthly subscription fee for the Production Service) Tj ET
+BT /F1 10.5 Tf 60.00 381.80 Td (stated in the applicable Order Form, excluding implementation, professional services, and pass-through) Tj ET
+BT /F1 10.5 Tf 60.00 368.15 Td (charges.) Tj ET
+BT /F2 10.5 Tf 60.00 348.50 Td (2. Availability Commitment) Tj ET
+BT /F1 10.5 Tf 60.00 328.85 Td (Provider will make the Production Service available with a Monthly Uptime Percentage of at least 99.9%) Tj ET
+BT /F1 10.5 Tf 60.00 315.20 Td (in each Service Month.) Tj ET
+BT /F2 10.5 Tf 60.00 295.55 Td (3. Exclusions) Tj ET
+BT /F1 10.5 Tf 60.00 275.90 Td (3.1 Downtime does not include unavailability resulting from: \(a\) Scheduled Maintenance; \(b\) acts or) Tj ET
+BT /F1 10.5 Tf 60.00 262.25 Td (omissions of Customer or its users, or Customer's equipment or networks; \(c\) events beyond Provider's) Tj ET
+BT /F1 10.5 Tf 60.00 248.60 Td (reasonable control as described in the force majeure section of the Agreement; or \(d\) features designated) Tj ET
+BT /F1 10.5 Tf 60.00 234.95 Td (as beta or preview.) Tj ET
+BT /F1 10.5 Tf 60.00 215.30 Td (3.2 "Scheduled Maintenance" means maintenance performed within a maintenance window that Provider) Tj ET
+BT /F1 10.5 Tf 60.00 201.65 Td (announces by email to Customer's Operational Notice Contacts at least five \(5\) Business Days before the) Tj ET
+BT /F1 10.5 Tf 60.00 188.00 Td (window begins. Only minutes falling within the announced window are excluded; any unavailability before) Tj ET
+BT /F1 10.5 Tf 60.00 174.35 Td (the announced window starts or after it ends counts as Downtime.) Tj ET
+BT /F1 10.5 Tf 60.00 154.70 Td (3.3 Multiple tickets or reports describing the same period of unavailability are counted once.) Tj ET
+BT /F2 10.5 Tf 60.00 135.05 Td (4. Service Credits) Tj ET
+BT /F1 10.5 Tf 60.00 115.40 Td (If the Monthly Uptime Percentage for a Service Month falls below the commitment in Section 2, Customer) Tj ET
+BT /F1 10.5 Tf 60.00 101.75 Td (is eligible for a service credit equal to the percentage of the Monthly Subscription Fee for that Service) Tj ET
+BT /F1 10.5 Tf 60.00 88.10 Td (Month shown below:) Tj ET
+0.5 w 60.00 64.85 209.10 17.25 re S
+BT /F2 9 Tf 63.00 69.85 Td (Monthly Uptime Percentage) Tj ET
+0.5 w 269.10 64.85 282.90 17.25 re S
+BT /F2 9 Tf 272.10 69.85 Td (Service Credit \(% of Monthly Subscription Fee\)) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 1 of 2) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 2001 >>
+stream
+0.5 w 60.00 714.75 209.10 17.25 re S
+BT /F1 9 Tf 63.00 719.75 Td (99.9% or higher) Tj ET
+0.5 w 269.10 714.75 282.90 17.25 re S
+BT /F1 9 Tf 272.10 719.75 Td (0%) Tj ET
+0.5 w 60.00 697.50 209.10 17.25 re S
+BT /F1 9 Tf 63.00 702.50 Td (Less than 99.9% but at least 99.5%) Tj ET
+0.5 w 269.10 697.50 282.90 17.25 re S
+BT /F1 9 Tf 272.10 702.50 Td (5%) Tj ET
+0.5 w 60.00 680.25 209.10 17.25 re S
+BT /F1 9 Tf 63.00 685.25 Td (Less than 99.5% but at least 99.0%) Tj ET
+0.5 w 269.10 680.25 282.90 17.25 re S
+BT /F1 9 Tf 272.10 685.25 Td (10%) Tj ET
+0.5 w 60.00 663.00 209.10 17.25 re S
+BT /F1 9 Tf 63.00 668.00 Td (Less than 99.0%) Tj ET
+0.5 w 269.10 663.00 282.90 17.25 re S
+BT /F1 9 Tf 272.10 668.00 Td (25%) Tj ET
+BT /F1 10.5 Tf 60.00 639.35 Td (Total service credits for any Service Month will not exceed 25% of the Monthly Subscription Fee for that) Tj ET
+BT /F1 10.5 Tf 60.00 625.70 Td (Service Month.) Tj ET
+BT /F2 10.5 Tf 60.00 606.05 Td (5. Claims and Application of Credits) Tj ET
+BT /F1 10.5 Tf 60.00 586.40 Td (5.1 To receive a service credit, Customer must submit a request through Provider's support channel) Tj ET
+BT /F1 10.5 Tf 60.00 572.75 Td (within thirty \(30\) days after the end of the affected Service Month, identifying the dates and approximate) Tj ET
+BT /F1 10.5 Tf 60.00 559.10 Td (times of the Downtime.) Tj ET
+BT /F1 10.5 Tf 60.00 539.45 Td (5.2 Approved service credits are applied against future invoices for the Production Service. Service) Tj ET
+BT /F1 10.5 Tf 60.00 525.80 Td (credits have no cash value and are not refundable.) Tj ET
+BT /F1 10.5 Tf 60.00 506.15 Td (5.3 Service credits are Customer's sole and exclusive remedy for any failure to meet the commitment in) Tj ET
+BT /F1 10.5 Tf 60.00 492.50 Td (Section 2.) Tj ET
+BT /F3 10.5 Tf 60.00 472.85 Td (Order Form reference: OF-HPL-2025-03 ó Arcadia AP Cloud Enterprise, 1,200 named users, Monthly) Tj ET
+BT /F3 10.5 Tf 60.00 459.20 Td (Subscription Fee USD 48,000.00.) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 2 of 2) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Title (MSA Exhibit C Service Levels) /Producer (Arcadia Ledger document export) >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000000326 00000 n 
+0000000431 00000 n 
+0000005100 00000 n 
+0000005246 00000 n 
+0000007299 00000 n 
+0000007445 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R /Info 10 0 R >>
+startxref
+7548
+%%EOF

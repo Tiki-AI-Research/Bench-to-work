@@ -1,0 +1,27 @@
+{
+  "mode": "Offline deterministic demo for file_collaboration hooks and stage progression",
+  "user": {
+    "type": "command",
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/file_collaboration/demo_agent.py"
+    ],
+    "supports_text_only": true
+  },
+  "worker": {
+    "type": "command",
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/file_collaboration/demo_agent.py"
+    ],
+    "supports_text_only": true
+  },
+  "reviewer": {
+    "type": "command",
+    "command": [
+      "{python}",
+      "{project}/tests/fixtures/file_collaboration/demo_agent.py"
+    ],
+    "supports_text_only": true
+  }
+}

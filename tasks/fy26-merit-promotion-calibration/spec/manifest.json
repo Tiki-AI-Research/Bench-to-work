@@ -1,0 +1,32 @@
+{
+  "files": {
+    "Executive_Calibration_Summary_FY26_DRAFT.docx": "e3add34ef154b79454521765d78e04494628041092560d20eabc253e1110f1c1",
+    "FY26_Calibration_Approval_Record_2026-11-24.docx": "182aff8ee67a0becf5b31d9464197d36590ad32b75d0fa36593f36c4b022d211",
+    "FY26_Compensation_Calibration_Guidelines.pdf": "26231e388703d88e9ea2171f5decafb6877273f0e6e08beb16e9e8219a46743f",
+    "FY26_Merit_Calibration_Workbook.xlsx": "3813ebe6034554c10cf420d7930425da87d391e1d0eaaaeb9ddbf4c6406b94c1",
+    "FY26_Product_Merit_Decision_2026-12-07.docx": "65031fc6c93639e3ab75ee8a28b8295ca2ecf132617689214b8b9e11b0ebbdf9",
+    "HR_Ops_Approved_Personnel_Actions_2026-11-20.pdf": "d4fd513a83b847ed81ec40cc3663a0ed8e62369a91ff0e61b6e4302aa9b77b6c",
+    "HR_Ops_Pre_Lock_Roster_Update_2026-11-30.pdf": "f8f1c0d326c4f7f18229cb28dc9619413fdc5a2a30187053d16026659a1ce411",
+    "README.md": "394c242033b3cf929b4ff0761cded59e03c6e406cabdbbc61959eff8e5dd1cc0",
+    "task.json": "96f60dd55e1cda907a3f4a75ad49bf80eb06a8642afc441428eb717f1f7a44e5",
+    "verifier.py": "ad1f173bcdbbfb1f780b9e60e28df5ac91e1bc0d72f7f2b93a34d5fdc44574f1",
+    "verify/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "verify/candidates.py": "c49fa99ec0f3200bf5dac0e04b5bf34f8bae02c139c257efb2310d5ed6e41da1",
+    "verify/checks.py": "43c65bef5e8abb9d5820a3dbabd428f8ebb783682d0f80f35699b7ca05867754",
+    "verify/design.json": "1f1beb33b3f070e2b9592ec7b706916faab8528cdb09ad86063fa9831a967f8d",
+    "verify/model.py": "30424dd11d4ff10e5c0e4da102283f7027f2cca717cab7a3b7d9dd6b7883b420",
+    "verify/reference/s1_complete_baseline/Executive_Calibration_Summary_FY26_DRAFT.docx": "d2bc4f0507a27c620c64f2d9d82cf3ab3c33b9fd89fb245c7f84cee128f68111",
+    "verify/reference/s1_complete_baseline/FY26_Merit_Calibration_Workbook.xlsx": "2bb4a3cf018dc035d9b4c9a001691a56583d1ff73f923f900cbb39cb0b274030",
+    "verify/reference/s2_hr_ops_batch/Executive_Calibration_Summary_FY26_DRAFT.docx": "10e062268213ae5966ace261083b8712e5809d4e6dcc7bd5b6e6bfb108fc1c50",
+    "verify/reference/s2_hr_ops_batch/FY26_Merit_Calibration_Workbook.xlsx": "c494f3d2b4041a3712a4088e5efe9f6769077ce352c50f8d0bb3751c2b2736fb",
+    "verify/reference/s3_approvals/Executive_Calibration_Summary_FY26_DRAFT.docx": "4e72fbe923bdbc1f356b2ba1875f9fa293f93e9e494a7d9704e4196055c8cb59",
+    "verify/reference/s3_approvals/FY26_Merit_Calibration_Workbook.xlsx": "579932fa1f2f107102fb7a9738c3102a003e0f6491737366cb14cd0b2aa3ef05",
+    "verify/reference/s4_final_package/Executive_Calibration_Summary_FY26.docx": "c8d685335368599ebee7f2ea7b4e842b7a31acf5d8895dfbc35e0dc177d3fd19",
+    "verify/reference/s4_final_package/FY26_Merit_Calibration_Workbook.xlsx": "da399cd5d215b2927130d409f8b746d508727108953ca1f3fa818482469eb4b4",
+    "verify/reference/s5_cfo_product_decision/Executive_Calibration_Summary_FY26.docx": "6a858556fd442cbe3eadf0a119eca535057a34367c3d5a00edc48ceabb823c66",
+    "verify/reference/s5_cfo_product_decision/FY26_Merit_Calibration_Workbook.xlsx": "8e6685f7dec70bb4f9a30005dca9974242879b1911f83f2ffe2cf437fe123094",
+    "verify/summary.py": "18bc76f01d063f5bbd33cfc5844b1bf8d7f9980ef9c290d84a55c8926409d74b",
+    "verify/workbook.py": "c9a9233ff980ac77fa756071f75ab9b83007513613a93822518c9b99fca6ea71",
+    "verify/xlsx_io.py": "61868a7e32857197fcdce151c159b112b9fd22eb98fdf857c4a6f5d65edab692"
+  }
+}

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bench-to-work"
+version = "0.1.0"
+description = "Bench-to-Work: Evaluating AI agents across the gap from clean benchmark prompts to multi-stage office work"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Chris", email = "chris@tikiai.co" }]
+keywords = ["benchmark", "agents", "multi-turn", "office-automation", "evaluation"]
+requires-python = ">=3.12"
+dependencies = [
+    "harbor==0.24.0",
+    "httpx[socks]>=0.28,<1",
+    "json-repair>=0.63.5,<0.64",
+    "jsonschema>=4.20,<5",
+    "openai>=2.20.0,<3",
+    "openpyxl>=3.1,<4",
+    "pypdf>=5,<7",
+    "python-docx==1.2.0",
+    "python-pptx==1.0.2",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+]
+
+[project.urls]
+Homepage = "https://github.com/Tiki-AI-Research/bench-to-work"
+Repository = "https://github.com/Tiki-AI-Research/bench-to-work"
+Issues = "https://github.com/Tiki-AI-Research/bench-to-work/issues"
+
+[project.scripts]
+bench-to-work = "multi_round.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multi_round", "src/multi_round_harbor", "src/bench_to_work"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

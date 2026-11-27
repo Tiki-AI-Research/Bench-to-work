@@ -1,0 +1,64 @@
+%PDF-1.4
+%ту╧╙
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 1969 >>
+stream
+BT /F3 10.5 Tf 60.00 718.35 Td (Email Ч printed from Outlook) Tj ET
+BT /F1 10 Tf 60.00 699.35 Td (From: Marcus Lee <marcus.lee@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 685.35 Td (To: Jordan Ellis <jordan.ellis@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 671.35 Td (Cc: Lena Ortiz <lena.ortiz@arcadialedger.com>; Priya Nair <priya.nair@arcadialedger.com>; Ana Ruiz) Tj ET
+BT /F1 10 Tf 60.00 658.35 Td (<ana.ruiz@arcadialedger.com>) Tj ET
+BT /F1 10 Tf 60.00 644.35 Td (Date: Mon, Nov 30, 2026 9:05 AM ET) Tj ET
+BT /F1 10 Tf 60.00 630.35 Td (Subject: Decision Ч Harbor Point Oct 2026 SLA credit \(HP-4452\)) Tj ET
+BT /F1 10.5 Tf 60.00 615.70 Td () Tj ET
+BT /F1 10.5 Tf 60.00 600.05 Td (Jordan Ч thanks for forwarding Greg's 11/25 email with the HP-4388 confirmation. Ana \(Legal\) and I) Tj ET
+BT /F1 10.5 Tf 60.00 586.40 Td (went through it over the holiday.) Tj ET
+BT /F1 10.5 Tf 60.00 566.75 Td (Exhibit C з3.2 requires the maintenance announcement to go to Harbor Point's Operational Notice) Tj ET
+BT /F1 10.5 Tf 60.00 553.10 Td (Contacts. Our own support team confirmed on Sep 14 that itops-notify@ was removed, and the Oct 5) Tj ET
+BT /F1 10.5 Tf 60.00 539.45 Td (notice for CHG-24117 went only to that address. So CHG-24117 does not qualify as Scheduled) Tj ET
+BT /F1 10.5 Tf 60.00 525.80 Td (Maintenance for Harbor Point, and all 140 minutes on Oct 15 count as Downtime.) Tj ET
+BT /F1 10.5 Tf 60.00 506.15 Td (On that basis I approve the October 2026 service credit for Harbor Point at the 10% tier, $4,800.00. No) Tj ET
+BT /F1 10.5 Tf 60.00 492.50 Td (further conditions. Please record it in the ledger and get the CMR over to Billing Ops.) Tj ET
+BT /F1 10.5 Tf 60.00 472.85 Td (Priya Ч please open a ticket to fix the notification service's subscriber sync for ARC-10482 \(and check) Tj ET
+BT /F1 10.5 Tf 60.00 459.20 Td (whether other tenants are affected\).) Tj ET
+BT /F1 10.5 Tf 60.00 439.55 Td (Marcus) Tj ET
+BT /F1 8 Tf 286.00 30 Td (Page 1 of 1) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Title (2026-11-30 Marcus Lee Decision) /Producer (Arcadia Ledger document export) >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000218 00000 n 
+0000000320 00000 n 
+0000000425 00000 n 
+0000002446 00000 n 
+0000002592 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R /Info 8 0 R >>
+startxref
+2696
+%%EOF

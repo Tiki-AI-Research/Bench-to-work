@@ -1,0 +1,80 @@
+{
+  "id": "artifact_followup_001",
+  "title": "Artifact-Aware Scope Narrowing Follow-Up",
+  "persona": "Operations lead who speaks concisely and bases follow-up requests on actual delivered reports.",
+  "background": "First summarize all orders from the same dataset, then narrow to the North region; amounts are in USD.",
+  "submission_paths": [
+    "output"
+  ],
+  "verifier": [
+    "{python}",
+    "{task}/verifier.py",
+    "{workspace}",
+    "{stage}"
+  ],
+  "stages": [
+    {
+      "id": "s1",
+      "title": "Generate overall order summary",
+      "initial": {
+        "id": "summarize",
+        "attachments": [
+          "materials/orders.csv"
+        ],
+        "message": {
+          "type": "context",
+          "instruction": "Ask the Worker to summarize all orders from materials/orders.csv into output/summary.json with fields region ('ALL'), count, and amount, and explain the scope."
+        }
+      },
+      "checkpoint": "Enter formal review when the Worker reports completion or delivery.",
+      "max_turns": 2,
+      "retry_limit": 0,
+      "needs_workspace": true,
+      "verifier_checks": [
+        {
+          "id": "correct_report",
+          "description": "Summary region, count, and amount match the stage requirement and published orders.",
+          "hard_gate": true
+        }
+      ],
+      "criteria": [
+        {
+          "id": "explain_delivery",
+          "description": "Reply cites output/summary.json and states the summarized scope consistent with the file.",
+          "verification": "Compare the delivery reply, user request, and region field in output/summary.json. In Stage 2, distinguish the prior overall total cited by the user from the newly requested North scope.",
+          "hard_gate": false
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "User reads delivered total and requests North region",
+      "initial": {
+        "id": "narrow",
+        "message": {
+          "type": "workspace",
+          "instruction": "Read the delivered output/summary.json first to get the actual previous amount. Cite that exact figure as the prior report total, then ask to update the same file to cover only the North region (region='N'), keeping fields region, count, and amount, and explain the new scope. Do not guess the prior total or pre-compute the North total for the Worker."
+        }
+      },
+      "checkpoint": "Enter formal review when the Worker reports completion or delivery.",
+      "max_turns": 2,
+      "retry_limit": 0,
+      "needs_workspace": true,
+      "verifier_checks": [
+        {
+          "id": "correct_report",
+          "description": "Summary region, count, and amount match the stage requirement and published orders.",
+          "hard_gate": true
+        }
+      ],
+      "criteria": [
+        {
+          "id": "explain_delivery",
+          "description": "Reply cites output/summary.json and states the summarized scope consistent with the file.",
+          "verification": "Compare the delivery reply, user request, and region field in output/summary.json. In Stage 2, distinguish the prior overall total cited by the user from the newly requested North scope.",
+          "hard_gate": false
+        }
+      ]
+    }
+  ]
+}

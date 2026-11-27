@@ -1,0 +1,8 @@
+schema_version = "1.4"
+
+[task]
+name = "bench-to-work/excel-demo"
+description = "Three-stage Excel order revision demo"
+
+[environment]
+workdir = "/workspace"

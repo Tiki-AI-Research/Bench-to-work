@@ -1,0 +1,34 @@
+# Minimal custom command Worker job configuration.
+#   ./scripts/run.sh --job custom-worker --dry-run
+#   ./scripts/run.sh --job custom-worker
+#
+# By default this example uses `configs/roles/offline-smoke.json` so you can verify
+# Docker container execution, file upload, session_id resumption, and /workspace
+# persistence end-to-end without any API keys.
+# For live benchmark evaluation, switch `roles:` to `configs/roles/pi-openai.json`
+# and set `key_env: YOUR_AGENT_API_KEY` if your Worker calls an external model API.
+
+dataset: tasks
+task_names:
+  - harborpoint-oct2026-sla-credit-handoff
+exclude_task_names: []
+
+worker:
+  harness: command
+  command:
+    - python3
+    - /tmp/custom-worker/agent.py
+  files:
+    - source: examples/custom_worker/agent.py
+      target: /tmp/custom-worker/agent.py
+  # key_env: MY_AGENT_API_KEY   # Optional: forwarded into the Worker container if set
+  timeout: 300
+
+roles: configs/roles/offline-smoke.json
+reward: bench_to_work.rewards:stage_scores
+
+n_attempts: 1
+n_concurrent_trials: 1
+jobs_dir: jobs
+verifier_timeout: 300
+reviewer_protocol_retry_limit: 2

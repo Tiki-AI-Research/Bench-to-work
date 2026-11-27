@@ -1,0 +1,15 @@
+{
+  "mode": "Offline deterministic controller roles (no LLM calls or API keys required; for verifying custom Worker container integration)",
+  "user": {
+    "type": "command",
+    "supports_text_only": true,
+    "command": ["{python}", "-B", "-m", "bench_to_work.smoke_agent"],
+    "timeout": 120
+  },
+  "reviewer": {
+    "type": "command",
+    "supports_text_only": true,
+    "command": ["{python}", "-B", "-m", "bench_to_work.smoke_agent"],
+    "timeout": 120
+  }
+}
